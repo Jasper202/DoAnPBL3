@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnPBL3.View;
+
+
 
 namespace DoAnPBL3
 {
@@ -16,7 +19,7 @@ namespace DoAnPBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new PhanQuyenNhanVien());
         }
     }
 }

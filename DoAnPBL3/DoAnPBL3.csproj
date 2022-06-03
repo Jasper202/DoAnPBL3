@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\QLGymBLL.cs" />
+    <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\CTHD.cs" />
+    <Compile Include="DTO\GoiTap.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\HoiVien.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\LichSu_GH.cs" />
+    <Compile Include="DTO\LoaiHang.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="QLGym.cs" />
     <Compile Include="View\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\PhanQuyenNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhanQuyenNhanVien.Designer.cs">
+      <DependentUpon>PhanQuyenNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\PhanQuyenNhanVien.resx">
+      <DependentUpon>PhanQuyenNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +170,7 @@
     <EmbeddedResource Include="View\ThemSanPham.resx">
       <DependentUpon>ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,9 +229,6 @@
   <ItemGroup>
     <None Include="Resources\895a5da4-f72a-425c-808c-643698133fec1.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
