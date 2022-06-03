@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAnPBL3.DTO
 {
-    internal class HoiVien
+    internal class TheHV
     {
     }
 }

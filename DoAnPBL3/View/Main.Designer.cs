@@ -56,6 +56,7 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbGoiTap_HV = new System.Windows.Forms.ComboBox();
             this.dateHetHan_HV = new System.Windows.Forms.DateTimePicker();
             this.rbtnNu_HV = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -71,10 +72,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnSearch_SP = new System.Windows.Forms.Button();
             this.btnDel_SP = new System.Windows.Forms.Button();
-            this.btnUp_SP = new System.Windows.Forms.Button();
-            this.btnAdd_SP = new System.Windows.Forms.Button();
+            this.btnSearch_SP = new System.Windows.Forms.Button();
             this.dataGridView_SP = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +83,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUp_SP = new System.Windows.Forms.Button();
             this.txtSearch_SP = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbbLoai_SP = new System.Windows.Forms.ComboBox();
             this.dateNgayNhap_SP = new System.Windows.Forms.DateTimePicker();
             this.txtTinhtrang_SP = new System.Windows.Forms.TextBox();
             this.txtHangSX_SP = new System.Windows.Forms.TextBox();
@@ -101,6 +102,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAdd_SP = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMenu_NV = new System.Windows.Forms.Button();
@@ -130,26 +132,30 @@
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnDel_KH = new System.Windows.Forms.Button();
-            this.btnUp_KH = new System.Windows.Forms.Button();
-            this.btnAdd_KH = new System.Windows.Forms.Button();
-            this.btnSearch_KH = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUp_KH = new System.Windows.Forms.Button();
+            this.btnAdd_KH = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnSearch_KH = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.dateNS_KH = new System.Windows.Forms.DateTimePicker();
-            this.txtDiaChi_KH = new System.Windows.Forms.TextBox();
-            this.txtSDT_KH = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtMa_KH = new System.Windows.Forms.TextBox();
-            this.txtTen_KH = new System.Windows.Forms.TextBox();
+            this.txtSDT_KH = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.txtDiaChi_KH = new System.Windows.Forms.TextBox();
+            this.txtTen_KH = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -167,6 +173,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -191,13 +198,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.cbbGoiTap_HV = new System.Windows.Forms.ComboBox();
-            this.cbbLoai_SP = new System.Windows.Forms.ComboBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             btn_Add_HV = new System.Windows.Forms.Button();
             btn_Up_HV = new System.Windows.Forms.Button();
@@ -218,18 +218,18 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Add_HV
@@ -333,7 +333,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1152, 348);
+            this.tabPage1.Size = new System.Drawing.Size(1147, 486);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "HỘI VIÊN";
             // 
@@ -474,6 +474,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hội viên";
+            // 
+            // cbbGoiTap_HV
+            // 
+            this.cbbGoiTap_HV.FormattingEnabled = true;
+            this.cbbGoiTap_HV.Location = new System.Drawing.Point(118, 312);
+            this.cbbGoiTap_HV.Name = "cbbGoiTap_HV";
+            this.cbbGoiTap_HV.Size = new System.Drawing.Size(173, 30);
+            this.cbbGoiTap_HV.TabIndex = 19;
             // 
             // dateHetHan_HV
             // 
@@ -640,20 +648,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 54);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1152, 348);
+            this.tabPage2.Size = new System.Drawing.Size(1147, 486);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SẢN PHẨM";
-            // 
-            // btnSearch_SP
-            // 
-            this.btnSearch_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_SP.Image")));
-            this.btnSearch_SP.Location = new System.Drawing.Point(1105, 6);
-            this.btnSearch_SP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch_SP.Name = "btnSearch_SP";
-            this.btnSearch_SP.Size = new System.Drawing.Size(33, 36);
-            this.btnSearch_SP.TabIndex = 5;
-            this.btnSearch_SP.UseVisualStyleBackColor = true;
             // 
             // btnDel_SP
             // 
@@ -671,38 +668,16 @@
             this.btnDel_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDel_SP.UseVisualStyleBackColor = false;
             // 
-            // btnUp_SP
+            // btnSearch_SP
             // 
-            this.btnUp_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUp_SP.BackColor = System.Drawing.Color.IndianRed;
-            this.btnUp_SP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUp_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_SP.Image")));
-            this.btnUp_SP.Location = new System.Drawing.Point(941, 129);
-            this.btnUp_SP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUp_SP.Name = "btnUp_SP";
-            this.btnUp_SP.Size = new System.Drawing.Size(160, 48);
-            this.btnUp_SP.TabIndex = 1;
-            this.btnUp_SP.Text = "SỬA";
-            this.btnUp_SP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUp_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUp_SP.UseVisualStyleBackColor = false;
-            this.btnUp_SP.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnAdd_SP
-            // 
-            this.btnAdd_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd_SP.BackColor = System.Drawing.Color.IndianRed;
-            this.btnAdd_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd_SP.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd_SP.Image")));
-            this.btnAdd_SP.Location = new System.Drawing.Point(941, 68);
-            this.btnAdd_SP.Name = "btnAdd_SP";
-            this.btnAdd_SP.Size = new System.Drawing.Size(160, 49);
-            this.btnAdd_SP.TabIndex = 0;
-            this.btnAdd_SP.Text = "THÊM";
-            this.btnAdd_SP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd_SP.UseVisualStyleBackColor = false;
+            this.btnSearch_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_SP.Image")));
+            this.btnSearch_SP.Location = new System.Drawing.Point(1105, 6);
+            this.btnSearch_SP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch_SP.Name = "btnSearch_SP";
+            this.btnSearch_SP.Size = new System.Drawing.Size(33, 36);
+            this.btnSearch_SP.TabIndex = 5;
+            this.btnSearch_SP.UseVisualStyleBackColor = true;
             // 
             // dataGridView_SP
             // 
@@ -798,6 +773,23 @@
             this.Column13.Name = "Column13";
             this.Column13.Width = 190;
             // 
+            // btnUp_SP
+            // 
+            this.btnUp_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUp_SP.BackColor = System.Drawing.Color.IndianRed;
+            this.btnUp_SP.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUp_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_SP.Image")));
+            this.btnUp_SP.Location = new System.Drawing.Point(941, 129);
+            this.btnUp_SP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUp_SP.Name = "btnUp_SP";
+            this.btnUp_SP.Size = new System.Drawing.Size(160, 48);
+            this.btnUp_SP.TabIndex = 1;
+            this.btnUp_SP.Text = "SỬA";
+            this.btnUp_SP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUp_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUp_SP.UseVisualStyleBackColor = false;
+            this.btnUp_SP.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txtSearch_SP
             // 
             this.txtSearch_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -836,6 +828,15 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN SẢN PHẨM";
+            // 
+            // cbbLoai_SP
+            // 
+            this.cbbLoai_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbLoai_SP.FormattingEnabled = true;
+            this.cbbLoai_SP.Location = new System.Drawing.Point(223, 134);
+            this.cbbLoai_SP.Name = "cbbLoai_SP";
+            this.cbbLoai_SP.Size = new System.Drawing.Size(215, 30);
+            this.cbbLoai_SP.TabIndex = 17;
             // 
             // dateNgayNhap_SP
             // 
@@ -1001,6 +1002,22 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã sản phẩm:";
             // 
+            // btnAdd_SP
+            // 
+            this.btnAdd_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd_SP.BackColor = System.Drawing.Color.IndianRed;
+            this.btnAdd_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_SP.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd_SP.Image")));
+            this.btnAdd_SP.Location = new System.Drawing.Point(941, 68);
+            this.btnAdd_SP.Name = "btnAdd_SP";
+            this.btnAdd_SP.Size = new System.Drawing.Size(160, 49);
+            this.btnAdd_SP.TabIndex = 0;
+            this.btnAdd_SP.Text = "THÊM";
+            this.btnAdd_SP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd_SP.UseVisualStyleBackColor = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Salmon;
@@ -1014,7 +1031,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 54);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1152, 348);
+            this.tabPage3.Size = new System.Drawing.Size(1147, 486);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "NHÂN VIÊN";
             // 
@@ -1344,6 +1361,39 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "KHÁCH HÀNG";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(786, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(348, 280);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(790, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(342, 280);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(785, 18);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(351, 268);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnDel_KH
             // 
             this.btnDel_KH.BackColor = System.Drawing.Color.IndianRed;
@@ -1359,47 +1409,6 @@
             this.btnDel_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDel_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDel_KH.UseVisualStyleBackColor = false;
-            // 
-            // btnUp_KH
-            // 
-            this.btnUp_KH.BackColor = System.Drawing.Color.IndianRed;
-            this.btnUp_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp_KH.ForeColor = System.Drawing.Color.White;
-            this.btnUp_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_KH.Image")));
-            this.btnUp_KH.Location = new System.Drawing.Point(609, 192);
-            this.btnUp_KH.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUp_KH.Name = "btnUp_KH";
-            this.btnUp_KH.Size = new System.Drawing.Size(160, 45);
-            this.btnUp_KH.TabIndex = 16;
-            this.btnUp_KH.Text = "Sửa";
-            this.btnUp_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUp_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUp_KH.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd_KH
-            // 
-            this.btnAdd_KH.BackColor = System.Drawing.Color.IndianRed;
-            this.btnAdd_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd_KH.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd_KH.Image")));
-            this.btnAdd_KH.Location = new System.Drawing.Point(609, 141);
-            this.btnAdd_KH.Name = "btnAdd_KH";
-            this.btnAdd_KH.Size = new System.Drawing.Size(160, 46);
-            this.btnAdd_KH.TabIndex = 15;
-            this.btnAdd_KH.Text = "Thêm";
-            this.btnAdd_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd_KH.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch_KH
-            // 
-            this.btnSearch_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_KH.Image")));
-            this.btnSearch_KH.Location = new System.Drawing.Point(535, 54);
-            this.btnSearch_KH.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch_KH.Name = "btnSearch_KH";
-            this.btnSearch_KH.Size = new System.Drawing.Size(56, 32);
-            this.btnSearch_KH.TabIndex = 14;
-            this.btnSearch_KH.UseVisualStyleBackColor = true;
             // 
             // dataGridView4
             // 
@@ -1472,6 +1481,81 @@
             this.Column25.Name = "Column25";
             this.Column25.Width = 302;
             // 
+            // btnUp_KH
+            // 
+            this.btnUp_KH.BackColor = System.Drawing.Color.IndianRed;
+            this.btnUp_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp_KH.ForeColor = System.Drawing.Color.White;
+            this.btnUp_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_KH.Image")));
+            this.btnUp_KH.Location = new System.Drawing.Point(609, 192);
+            this.btnUp_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUp_KH.Name = "btnUp_KH";
+            this.btnUp_KH.Size = new System.Drawing.Size(160, 45);
+            this.btnUp_KH.TabIndex = 16;
+            this.btnUp_KH.Text = "Sửa";
+            this.btnUp_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUp_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUp_KH.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd_KH
+            // 
+            this.btnAdd_KH.BackColor = System.Drawing.Color.IndianRed;
+            this.btnAdd_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_KH.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd_KH.Image")));
+            this.btnAdd_KH.Location = new System.Drawing.Point(609, 141);
+            this.btnAdd_KH.Name = "btnAdd_KH";
+            this.btnAdd_KH.Size = new System.Drawing.Size(160, 46);
+            this.btnAdd_KH.TabIndex = 15;
+            this.btnAdd_KH.Text = "Thêm";
+            this.btnAdd_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd_KH.UseVisualStyleBackColor = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.Color.Snow;
+            this.groupBox7.Controls.Add(this.btnSearch_KH);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Controls.Add(this.dateNS_KH);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Controls.Add(this.txtMa_KH);
+            this.groupBox7.Controls.Add(this.txtSDT_KH);
+            this.groupBox7.Controls.Add(this.label22);
+            this.groupBox7.Controls.Add(this.label21);
+            this.groupBox7.Controls.Add(this.txtDiaChi_KH);
+            this.groupBox7.Controls.Add(this.txtTen_KH);
+            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(6, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(598, 280);
+            this.groupBox7.TabIndex = 18;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "THÔNG TIN KHÁCH HÀNG";
+            // 
+            // btnSearch_KH
+            // 
+            this.btnSearch_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_KH.Image")));
+            this.btnSearch_KH.Location = new System.Drawing.Point(535, 54);
+            this.btnSearch_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch_KH.Name = "btnSearch_KH";
+            this.btnSearch_KH.Size = new System.Drawing.Size(56, 32);
+            this.btnSearch_KH.TabIndex = 14;
+            this.btnSearch_KH.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(22, 62);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 20);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Mã KH:";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
             // dateNS_KH
             // 
             this.dateNS_KH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1483,23 +1567,17 @@
             this.dateNS_KH.Size = new System.Drawing.Size(423, 28);
             this.dateNS_KH.TabIndex = 11;
             // 
-            // txtDiaChi_KH
+            // label20
             // 
-            this.txtDiaChi_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi_KH.Location = new System.Drawing.Point(108, 242);
-            this.txtDiaChi_KH.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDiaChi_KH.Name = "txtDiaChi_KH";
-            this.txtDiaChi_KH.Size = new System.Drawing.Size(423, 28);
-            this.txtDiaChi_KH.TabIndex = 10;
-            // 
-            // txtSDT_KH
-            // 
-            this.txtSDT_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT_KH.Location = new System.Drawing.Point(108, 197);
-            this.txtSDT_KH.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSDT_KH.Name = "txtSDT_KH";
-            this.txtSDT_KH.Size = new System.Drawing.Size(423, 28);
-            this.txtSDT_KH.TabIndex = 9;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Snow;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(22, 155);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(82, 20);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Ngày sinh:";
             // 
             // txtMa_KH
             // 
@@ -1510,14 +1588,14 @@
             this.txtMa_KH.Size = new System.Drawing.Size(423, 28);
             this.txtMa_KH.TabIndex = 7;
             // 
-            // txtTen_KH
+            // txtSDT_KH
             // 
-            this.txtTen_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen_KH.Location = new System.Drawing.Point(108, 100);
-            this.txtTen_KH.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTen_KH.Name = "txtTen_KH";
-            this.txtTen_KH.Size = new System.Drawing.Size(423, 28);
-            this.txtTen_KH.TabIndex = 6;
+            this.txtSDT_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT_KH.Location = new System.Drawing.Point(108, 197);
+            this.txtSDT_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSDT_KH.Name = "txtSDT_KH";
+            this.txtSDT_KH.Size = new System.Drawing.Size(423, 28);
+            this.txtSDT_KH.TabIndex = 9;
             // 
             // label22
             // 
@@ -1543,17 +1621,23 @@
             this.label21.TabIndex = 4;
             this.label21.Text = "Địa chỉ:";
             // 
-            // label20
+            // txtDiaChi_KH
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Snow;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(22, 155);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 20);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Ngày sinh:";
+            this.txtDiaChi_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi_KH.Location = new System.Drawing.Point(108, 242);
+            this.txtDiaChi_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDiaChi_KH.Name = "txtDiaChi_KH";
+            this.txtDiaChi_KH.Size = new System.Drawing.Size(423, 28);
+            this.txtDiaChi_KH.TabIndex = 10;
+            // 
+            // txtTen_KH
+            // 
+            this.txtTen_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTen_KH.Location = new System.Drawing.Point(108, 100);
+            this.txtTen_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTen_KH.Name = "txtTen_KH";
+            this.txtTen_KH.Size = new System.Drawing.Size(423, 28);
+            this.txtTen_KH.TabIndex = 6;
             // 
             // label19
             // 
@@ -1566,18 +1650,6 @@
             this.label19.Size = new System.Drawing.Size(66, 20);
             this.label19.TabIndex = 2;
             this.label19.Text = "Tên KH:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(22, 62);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 20);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Mã KH:";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // tabPage5
             // 
@@ -1793,6 +1865,19 @@
             this.label29.Size = new System.Drawing.Size(58, 20);
             this.label29.TabIndex = 0;
             this.label29.Text = "Mã HV";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Salmon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(700, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPage6
             // 
@@ -2067,91 +2152,6 @@
             this.timer2.Interval = 15;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // cbbGoiTap_HV
-            // 
-            this.cbbGoiTap_HV.FormattingEnabled = true;
-            this.cbbGoiTap_HV.Location = new System.Drawing.Point(118, 312);
-            this.cbbGoiTap_HV.Name = "cbbGoiTap_HV";
-            this.cbbGoiTap_HV.Size = new System.Drawing.Size(173, 30);
-            this.cbbGoiTap_HV.TabIndex = 19;
-            // 
-            // cbbLoai_SP
-            // 
-            this.cbbLoai_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbbLoai_SP.FormattingEnabled = true;
-            this.cbbLoai_SP.Location = new System.Drawing.Point(223, 134);
-            this.cbbLoai_SP.Name = "cbbLoai_SP";
-            this.cbbLoai_SP.Size = new System.Drawing.Size(215, 30);
-            this.cbbLoai_SP.TabIndex = 17;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.Color.Snow;
-            this.groupBox7.Controls.Add(this.btnSearch_KH);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Controls.Add(this.dateNS_KH);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Controls.Add(this.txtMa_KH);
-            this.groupBox7.Controls.Add(this.txtSDT_KH);
-            this.groupBox7.Controls.Add(this.label22);
-            this.groupBox7.Controls.Add(this.label21);
-            this.groupBox7.Controls.Add(this.txtDiaChi_KH);
-            this.groupBox7.Controls.Add(this.txtTen_KH);
-            this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(6, 6);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(598, 280);
-            this.groupBox7.TabIndex = 18;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "THÔNG TIN KHÁCH HÀNG";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(790, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(342, 280);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(786, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(348, 280);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(785, 18);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(351, 268);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Salmon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(700, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 240);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2183,21 +2183,21 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

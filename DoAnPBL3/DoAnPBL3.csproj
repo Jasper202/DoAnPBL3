@@ -60,13 +60,13 @@
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\GoiTap.cs" />
     <Compile Include="DTO\HoaDon.cs" />
-    <Compile Include="DTO\HoiVien.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LichSu_GH.cs" />
     <Compile Include="DTO\LoaiHang.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\SanPham.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TheHV.cs" />
     <Compile Include="QLGym.cs" />
     <Compile Include="View\Bill.cs">
       <SubType>Form</SubType>
