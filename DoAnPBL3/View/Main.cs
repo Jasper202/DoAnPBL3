@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnPBL3.DTO;
 
 namespace DoAnPBL3
 {
+    
     public partial class Main : Form
     {
+        QLGym db = new QLGym();
         public Main()
         {
-            InitializeComponent();
+           InitializeComponent();
+           dataGridView_NV.DataSource=db.NhanViens.ToList();
         }
 
         private void button2_Click(object sender, EventArgs e)

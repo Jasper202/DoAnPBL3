@@ -42,7 +42,7 @@ namespace DoAnPBL3.View
                 }
             }
         }
-        private bool isCollapsed2;
+       
         private void btn_Menu2_Click(object sender, EventArgs e)
         {
             timer2.Start();
