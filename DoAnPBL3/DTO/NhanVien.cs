@@ -17,7 +17,7 @@ namespace DoAnPBL3.DTO
         public DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
         public string DiaChi { get; set; }
-        [Required]
+        [StringLength(9)]
         public string MaTK { get; set; }
         public string SDT { get; set; }
         [ForeignKey("MaTK")]

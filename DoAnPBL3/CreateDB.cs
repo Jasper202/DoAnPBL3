@@ -23,10 +23,11 @@ namespace DoAnPBL3
             });
             context.NhanViens.AddRange(new NhanVien[]
             {
-                new NhanVien{MaNV= "NV01",TenNV="Tây",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Quang Nam", MaTK="TKO1",SDT="0941638715",  },
-                new NhanVien{MaNV= "NV02",TenNV="Nhật",NgaySinh= DateTime.Now, GioiTinh=false, DiaChi="Da Nang", MaTK="TKO2", SDT="0941638716",},
-                new NhanVien{MaNV= "NV03",TenNV="Hiệu",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Tam Ky", MaTK="TKO3", SDT="0941638717" },
+                new NhanVien{MaNV= "NV01",TenNV="Tây",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Quang Nam", MaTK="TK01",SDT="0941638715",  },
+                new NhanVien{MaNV= "NV02",TenNV="Nhật",NgaySinh= DateTime.Now, GioiTinh=false, DiaChi="Da Nang", MaTK="TK02", SDT="0941638716",},
+                new NhanVien{MaNV= "NV03",TenNV="Hiệu",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Tam Ky", MaTK="TK03", SDT="0941638717" },
             });
+
         }
     }
 }
