@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAnPBL3.BLL
 {
-    internal class QLGymBLL
+    internal class TaiKhoanBLL
     {
     }
 }

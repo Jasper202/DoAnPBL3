@@ -16,16 +16,16 @@ namespace DoAnPBL3
         {
             context.TaiKhoans.AddRange(new TaiKhoan[]
             {
-                new TaiKhoan{MaTK= "TK01", TenDN="Tay", MatKhau="123", Quyen= 1},
-                new TaiKhoan{MaTK= "TK02", TenDN="Nhat", MatKhau="456", Quyen= 0},
-                new TaiKhoan{MaTK= "TK03", TenDN="Hieu", MatKhau="789", Quyen= 0},
+                new TaiKhoan{MaTK= "TK001", TenDN="Tay", MatKhau="123", Quyen= 1},
+                new TaiKhoan{MaTK= "TK002", TenDN="Nhat", MatKhau="456", Quyen= 0},
+                new TaiKhoan{MaTK= "TK003", TenDN="Hieu", MatKhau="789", Quyen= 0},
 
             });
             context.NhanViens.AddRange(new NhanVien[]
             {
-                new NhanVien{MaNV= "NV01",TenNV="Tây",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Quang Nam", MaTK="TK01",SDT="0941638715",  },
-                new NhanVien{MaNV= "NV02",TenNV="Nhật",NgaySinh= DateTime.Now, GioiTinh=false, DiaChi="Da Nang", MaTK="TK02", SDT="0941638716",},
-                new NhanVien{MaNV= "NV03",TenNV="Hiệu",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Tam Ky", MaTK="TK03", SDT="0941638717" },
+                new NhanVien{MaNV= "NV001",TenNV="Tây",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Quang Nam", MaTK="TK001",SDT="0941638715",Chucvu="Quanli", CCCD = "10220011231"  },
+                new NhanVien{MaNV= "NV002",TenNV="Nhật",NgaySinh= DateTime.Now, GioiTinh=false, DiaChi="Da Nang", MaTK="TK002", SDT="0941638716",Chucvu="Quanli", CCCD = "10220011231"},
+                new NhanVien{MaNV= "NV003",TenNV="Hiệu",NgaySinh= DateTime.Now, GioiTinh=true, DiaChi="Tam Ky", MaTK="TK003", SDT="0941638717", Chucvu="Quanli", CCCD = "10220011231" },
             });
 
         }
