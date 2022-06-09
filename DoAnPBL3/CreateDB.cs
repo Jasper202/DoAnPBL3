@@ -11,6 +11,7 @@ namespace DoAnPBL3
     public class CreateDB:
         CreateDatabaseIfNotExists<QLGym>
         //DropCreateDatabaseIfModelChanges<QLGym>
+        //DropCreateDatabaseAlways<QLGym>
     {
         protected override void Seed(QLGym context)
         {
