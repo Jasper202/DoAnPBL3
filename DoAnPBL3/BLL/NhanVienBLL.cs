@@ -29,13 +29,16 @@ namespace DoAnPBL3.BLL
         public List<CBBItem> GetCBBChucVu()
         {
             List<CBBItem> list = new List<CBBItem>();
-            foreach(TaiKhoan i in db.TaiKhoans.Select(p=>p))
+
+            foreach(TaiKhoan i in db.TaiKhoans.Select(p => p))
             {
                 list.Add(new CBBItem
                 {
                     Value = Convert.ToInt32(i.MaTK),
-                    Text = i.TenChucVu
+                    Text = i.TenChucVu.ToString()
+                   
                 });
+                
             }
             return list;
         }
