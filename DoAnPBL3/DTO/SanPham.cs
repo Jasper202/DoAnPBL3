@@ -28,7 +28,6 @@ namespace DoAnPBL3.DTO
         public int SoLuongCon { get; set; }
         public DateTime NgayNhap { get; set; }
         public DateTime HanSuDung { get; set; }
-        public string TinhTrang { get; set; }
         [ForeignKey("MaLH")]
         public virtual LoaiHang LoaiHang { get; set; }
         public virtual ICollection<CTHD> CTHDs { get; set; }

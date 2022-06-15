@@ -33,6 +33,6 @@ namespace DoAnPBL3.DTO
         public virtual KhachHang KhachHang { get; set; }
         [ForeignKey("MaNV")]
         public virtual NhanVien NhanVien { get; set; }
-        public ICollection<CTHD> CTHDs { get; set; }
+        public virtual ICollection<CTHD> CTHDs { get; set; }
     }
 }

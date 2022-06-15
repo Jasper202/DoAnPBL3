@@ -20,6 +20,7 @@ namespace DoAnPBL3.DTO
         public string TenDN { get; set; }
         public string MatKhau { get; set; }
         public int Quyen { get; set; }
+        public string TenChucVu { get; set; }
         public virtual ICollection<NhanVien> NhanViens { get; set; }
 
     }

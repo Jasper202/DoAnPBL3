@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAnPBL3.DTO;
+using DoAnPBL3.BLL;
 
 namespace DoAnPBL3
 {
@@ -17,8 +18,13 @@ namespace DoAnPBL3
         QLGym db = new QLGym();
         public Main()
         {
-           InitializeComponent();
-           dataGridView_NV.DataSource=db.NhanViens.ToList();
+           InitializeComponent();           
+           Load();
+
+        }
+        public void Load()
+        {
+            dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -93,6 +99,62 @@ namespace DoAnPBL3
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //12345
+        }
+        public void ShowNV(string txt)
+        {
+            dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
+        }
+
+        private void btnAdd_NV_Click(object sender, EventArgs e)
+        {
+            ThemNhanVien f = new ThemNhanVien("");
+            f.d = new ThemNhanVien.MyDel(ShowNV);
+            f.Show();
+        }
+
+        private void btnUp_NV_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_NV.SelectedRows.Count == 1)
+            {
+                NhanVien_View _select = dataGridView_NV.SelectedRows[0].DataBoundItem as NhanVien_View;
+                ThemNhanVien f = new ThemNhanVien(_select.MaNV);
+                f.d = new ThemNhanVien.MyDel(ShowNV);
+                f.Show();
+            }
+        }
+
+        private void btnDel_NV_Click(object sender, EventArgs e)
+        {
+            List<string> LNV = new List<string>();
+            if (dataGridView_NV.SelectedRows.Count >= 0)
+            {
+                foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
+                {
+                    LNV.Add(i.Cells["MaNV"].Value.ToString());
+                }
+                NhanVienBLL.Instance.DelNV(LNV);
+            }
+            ShowNV("");
+        }
+        //private void btnDel_NV_Click(object sender, EventArgs e)
+        //{
+        //    //List<string> LNV = new List<string>();
+        //    if (dataGridView_NV.SelectedRows.Count == 1)
+        //    {
+        //        foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
+        //        {
+        //            string maNV = i.Cells["MaNV"].Value.ToString();
+        //            NhanVienBLL.Instance.DelNV(maNV);
+        //        }
+        //       // NhanVienBLL.Instance.DelNV(maNV);
+        //    }
+        //    ShowNV("");
+        //}
+
+        private void btnSearch_NV_Click(object sender, EventArgs e)
+        {
+            string txt = txtSearch_NV.Text;
+            dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
         }
     }
 }

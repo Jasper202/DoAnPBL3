@@ -28,8 +28,7 @@ namespace DoAnPBL3.DTO
         [StringLength(9)]
         public string MaTK { get; set; }
         public string SDT { get; set; }
-       
-        public string Chucvu { get; set; }
+            
         public string CCCD { get; set; }
         [ForeignKey("MaTK")]
         public virtual TaiKhoan TaiKhoan { get; set; }

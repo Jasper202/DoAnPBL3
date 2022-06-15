@@ -7,29 +7,72 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnPBL3.DTO;
+using DoAnPBL3.BLL;
 
 namespace DoAnPBL3
 {
     public partial class ThemNhanVien : Form
     {
-        public ThemNhanVien()
+        public delegate void MyDel(string txt);
+        public MyDel d { get; set; }
+
+        private string MaNV { get; set; }
+        public ThemNhanVien(string m)
         {
+            MaNV = m;
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
+            SetCBBChucVu();
+            GUI();
 
         }
-
-        private void label4_Click(object sender, EventArgs e)
+        public void SetCBBChucVu()
         {
-
+            cbbVTNV.Items.AddRange(NhanVienBLL.Instance.GetCBBChucVu().ToArray());
+        }   
+        public void GUI()
+        {
+            if (MaNV == "") return;
+            NhanVien s = NhanVienBLL.Instance.GetNVByMaNV(MaNV);
+            txtMaNV.Enabled = false;
+            txtMaNV.Text = s.MaNV;
+            txtTenNV.Text = s.TenNV;
+            txtSDTNV.Text = s.SDT;
+            txtDiachiNV.Text = s.DiaChi;
+            NgaySinhNV.Value = s.NgaySinh;
+            txtSoCCCNV.Text = s.CCCD;
+            foreach (CBBItem i in cbbVTNV.Items)
+            {
+                if (i.Value == NhanVienBLL.Instance.GetMaTKPByMaNV(s.MaNV))
+                {
+                    cbbVTNV.SelectedItem = i;
+                    break;
+                }
+            }
         }
 
-        private void txtThemSdtNV_TextChanged(object sender, EventArgs e)
+        private void btnLuuNV_Click_1(object sender, EventArgs e)
         {
+            NhanVien s = new NhanVien
+            {
+                MaNV = txtMaNV.Text,
+                TenNV = txtTenNV.Text,
+                GioiTinh = rdoNVNam.Checked,
+                NgaySinh = NgaySinhNV.Value.Date,
+                DiaChi = txtDiachiNV.Text,
+                SDT = txtSDTNV.Text,
+                CCCD = txtSoCCCNV.Text,
+                MaTK = (((CBBItem)cbbVTNV.SelectedItem).Value).ToString(),
+            };
+            NhanVienBLL.Instance.AddUpdate(s);
+            d("");
+            this.Dispose();
+        }
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
+
