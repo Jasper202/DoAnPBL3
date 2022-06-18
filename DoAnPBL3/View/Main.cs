@@ -25,6 +25,7 @@ namespace DoAnPBL3
         public void Load()
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
+            dataGridView_KH.DataSource = KhachHangBLL.Instance.GetAllKHView();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -135,26 +136,91 @@ namespace DoAnPBL3
                 NhanVienBLL.Instance.DelNV(LNV);
             }
             ShowNV("");
-        }
-        //private void btnDel_NV_Click(object sender, EventArgs e)
-        //{
-        //    //List<string> LNV = new List<string>();
-        //    if (dataGridView_NV.SelectedRows.Count == 1)
-        //    {
-        //        foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
-        //        {
-        //            string maNV = i.Cells["MaNV"].Value.ToString();
-        //            NhanVienBLL.Instance.DelNV(maNV);
-        //        }
-        //       // NhanVienBLL.Instance.DelNV(maNV);
-        //    }
-        //    ShowNV("");
-        //}
+        }     
 
         private void btnSearch_NV_Click(object sender, EventArgs e)
         {
             string txt = txtSearch_NV.Text;
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
+        }
+
+        private void dataGridView_NV_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_NV.SelectedRows.Count == 1)
+            {
+                NhanVien_View _select = dataGridView_NV.SelectedRows[0].DataBoundItem as NhanVien_View;
+                txtMa_NV.Text = _select.MaNV;
+                txtTen_NV.Text = _select.TenNV;
+                if (_select.GioiTinh)
+                {
+                    rbtnNam_NV.Checked = true;               
+                }
+                else
+                {
+                    rbtnNu_NV.Checked = true; 
+                }    
+                txtSDT_NV.Text = _select.SDT;
+                txtCCCD_NV.Text = _select.CCCD;
+                txtVitri_NV.Text = _select.ChucVu;
+
+            }
+
+        }
+        /// QUẢN LÝ KHÁCH HÀNG
+        public void ShowKH(string txt)
+        {
+            dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txt);
+        }
+
+        private void btnAdd_KH_Click(object sender, EventArgs e)
+        {
+            ThemKhachHang f = new ThemKhachHang("");
+            f.d1 = new ThemKhachHang.MyDel(ShowKH);
+            f.Show();
+        }
+
+        private void btnUp_KH_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_NV.SelectedRows.Count == 1)
+            {
+                KhachHang_View _select = dataGridView_KH.SelectedRows[0].DataBoundItem as KhachHang_View;
+                ThemKhachHang f = new ThemKhachHang(_select.MaKH);
+                f.d1 = new ThemKhachHang.MyDel(ShowKH);
+                f.Show();
+            }
+        }
+
+        private void btnDel_KH_Click(object sender, EventArgs e)
+        {
+            List<string> LKH = new List<string>();
+            if (dataGridView_KH.SelectedRows.Count >= 0)
+            {
+                foreach (DataGridViewRow i in dataGridView_KH.SelectedRows)
+                {
+                    LKH.Add(i.Cells["MaKH"].Value.ToString());
+                }
+                KhachHangBLL.Instance.DelKH(LKH);
+            }
+            ShowKH("");
+        }
+
+        private void dataGridView_KH_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_KH.SelectedRows.Count == 1)
+            {
+                KhachHang_View _select = dataGridView_KH.SelectedRows[0].DataBoundItem as KhachHang_View;
+                txtMa_KH.Text = _select.MaKH;
+                txtTen_KH.Text = _select.TenKH;
+                dateNS_KH.Value = _select.NgaySinh;
+                txtSDT_KH.Text = _select.SDT;               
+                txtDiaChi_KH.Text = _select.DiaChi;
+            }
+        }
+
+        private void btnSearch_KH_Click(object sender, EventArgs e)
+        {
+            string txt = txtSearchKH.Text;
+            dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txt);
         }
     }
 }
