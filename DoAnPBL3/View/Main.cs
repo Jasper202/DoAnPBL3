@@ -25,12 +25,10 @@ namespace DoAnPBL3
         public void Load()
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
+            dataGridView_SP.DataSource = SanPhamBLL.Instance.GetAllSPView();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnMenu1_Click(object sender, EventArgs e)
         {
@@ -155,6 +153,48 @@ namespace DoAnPBL3
         {
             string txt = txtSearch_NV.Text;
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
+        }
+        public void ShowSP(string txt)
+        {
+            dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
+            //dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
+        }
+        private void btnAdd_SP_Click(object sender, EventArgs e)
+        {
+            ThemSanPham f = new ThemSanPham("");
+            f.d = new ThemSanPham.MyDel(ShowSP);
+            f.Show();
+        }
+
+        private void btnUp_SP_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_SP.SelectedRows.Count == 1)
+            {
+                SanPham_View _select = dataGridView_SP.SelectedRows[0].DataBoundItem as SanPham_View;
+                ThemSanPham f = new ThemSanPham(_select.MaSP);
+                f.d = new ThemSanPham.MyDel(ShowSP);
+                f.Show();
+            }
+        }
+
+        private void btnDel_SP_Click(object sender, EventArgs e)
+        {
+            List<string> LSP = new List<string>();
+            if (dataGridView_SP.SelectedRows.Count >= 0)
+            {
+                foreach (DataGridViewRow i in dataGridView_SP.SelectedRows)
+                {
+                    LSP.Add(i.Cells["MaSP"].Value.ToString());
+                }
+                SanPhamBLL.Instance.DelSP(LSP);
+            }
+            ShowSP("");
+        }
+
+        private void btnSearch_SP_Click(object sender, EventArgs e)
+        {
+            string txt = txtSearch_SP.Text;
+            dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
         }
     }
 }
