@@ -13,6 +13,8 @@ namespace DoAnPBL3.DTO
     {
         [Key]
         [StringLength(9)]
+        public string MaLS { get; set; }
+        [StringLength(9)]
         public string MaHV { get; set; }
         
         public DateTime NgayGH { get; set; }
