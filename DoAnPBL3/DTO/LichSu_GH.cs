@@ -13,7 +13,7 @@ namespace DoAnPBL3.DTO
     {
         [Key]
         [StringLength(9)]
-        public string MaLS { get; set; }
+        public string MaLS { get; set; }//123
         [StringLength(9)]
         public string MaHV { get; set; }
         
