@@ -37,6 +37,14 @@ namespace DoAnPBL3
             txtMaNV.Enabled = false;
             txtMaNV.Text = s.MaNV;
             txtTenNV.Text = s.TenNV;
+            if(s.GioiTinh)
+            {
+                rdoNVNam.Checked = true;
+            }    
+            else
+            {
+                rdoNVNam.Checked = false;
+            }    
             txtSDTNV.Text = s.SDT;
             txtDiachiNV.Text = s.DiaChi;
             NgaySinhNV.Value = s.NgaySinh;
