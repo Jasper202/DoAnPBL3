@@ -14,6 +14,8 @@ namespace DoAnPBL3.DTO
         
         [StringLength(9)]
         [Key]
+        public string MaCTHD { get; set; }
+        [StringLength(9)]
         public string MaHD { get; set; }
         
         public int SoLuong { get; set; }

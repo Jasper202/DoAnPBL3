@@ -70,18 +70,18 @@ namespace DoAnPBL3
                 new LoaiHang{MaLH="LH04",TenLH="BS Omega3",HangSX="GHT"},
                 new LoaiHang{MaLH="LH05",TenLH="Thực phẩm thay thế",HangSX="MKI"},
             });
-            //context.HoaDons.AddRange(new HoaDon[]
-            //{
-            //    new HoaDon{MaHD="HD01",NgayHD=DateTime.Now,MaNV="NV01",MaKH="KH03",TongHD=300.000},
-            //    new HoaDon{MaHD="HD02",NgayHD=DateTime.Now,MaNV="NV04",MaKH="KH01",TongHD=100.000},
-            //    new HoaDon{MaHD="HD03",NgayHD=DateTime.Now,MaNV="NV03",MaKH="KH04",TongHD=200.000},
-            //    new HoaDon{MaHD="HD04",NgayHD=DateTime.Now,MaNV="NV02",MaKH="KH02",TongHD=300.000},
-            //    new HoaDon{MaHD="HD05",NgayHD=DateTime.Now,MaNV="NV05",MaKH="KH05",TongHD=500.000},
-            //});
-            
-                
+            context.HoaDons.AddRange(new HoaDon[]
+            {
+                new HoaDon{MaHD="HD01",NgayHD=DateTime.Now,MaNV="NV01",MaKH="KH03",TongHD=300.000},
+                new HoaDon{MaHD="HD02",NgayHD=DateTime.Now,MaNV="NV04",MaKH="KH01",TongHD=100.000},
+                new HoaDon{MaHD="HD03",NgayHD=DateTime.Now,MaNV="NV03",MaKH="KH04",TongHD=200.000},
+                new HoaDon{MaHD="HD04",NgayHD=DateTime.Now,MaNV="NV02",MaKH="KH02",TongHD=300.000},
+                new HoaDon{MaHD="HD05",NgayHD=DateTime.Now,MaNV="NV05",MaKH="KH05",TongHD=500.000},
+            });
 
-                
+
+
+
         }
     }
 }
