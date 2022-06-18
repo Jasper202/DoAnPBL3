@@ -35,6 +35,7 @@ namespace DoAnPBL3
             SanPham s = SanPhamBLL.Instance.GetSPByMaSP(MaSP);
             txtMaSP.Enabled = false;
             txtMaSP.Text = s.MaSP;
+            txtTenSP.Text = s.TenSP;
             txtDonGiaSP.Text = s.DonGia.ToString();
             txtSoLuongSP.Text = s.SoLuongCon.ToString();
             dateNgayNhap.Value = s.NgayNhap;
