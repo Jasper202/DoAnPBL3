@@ -57,19 +57,28 @@ namespace DoAnPBL3
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            SanPham s = new SanPham
+            try 
             {
-                MaSP = txtMaSP.Text,
-                TenSP = txtTenSP.Text,
-                DonGia = Convert.ToDouble(txtDonGiaSP.Text),
-                NgayNhap = dateNgayNhap.Value.Date,
-                HanSuDung = dateHansudung.Value.Date,
-                SoLuongCon = Convert.ToInt32(txtSoLuongSP.Text),
-                MaLH = (((CBBItem2)cboLoaiSP.SelectedItem).Value).ToString(),
-            };
-            SanPhamBLL.Instance.AddUpdate(s);
-            d("");
-            this.Dispose();
+                SanPham s = new SanPham
+                {
+                    MaSP = txtMaSP.Text,
+                    TenSP = txtTenSP.Text,
+                    DonGia = Convert.ToDouble(txtDonGiaSP.Text),
+                    NgayNhap = dateNgayNhap.Value.Date,
+                    HanSuDung = dateHansudung.Value.Date,
+                    SoLuongCon = Convert.ToInt32(txtSoLuongSP.Text),
+                    MaLH = (((CBBItem2)cboLoaiSP.SelectedItem).Value).ToString(),
+                };
+                SanPhamBLL.Instance.AddUpdate(s);
+                d("");
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
+            }
+            
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

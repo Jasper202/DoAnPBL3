@@ -24,7 +24,17 @@ namespace DoAnPBL3.BLL
         }
         private KhachHangBLL()
         {
-        }      
+        }
+
+        public List<KhachHang> GetAllKH()
+        {
+            List<KhachHang> listkh = new List<KhachHang>();
+            foreach (KhachHang i in db.KhachHangs.Select(p => p))
+            {
+                listkh.Add(i);
+            }
+            return listkh;
+        }
         public List<KhachHang_View> GetAllKHView()
         {
             List<KhachHang_View> list = new List<KhachHang_View>();
@@ -36,7 +46,7 @@ namespace DoAnPBL3.BLL
                     TenKH = i.TenKH,
                     DiaChi = i.DiaChi,
                     SDT = i.SDT,
-                    NgaySinh = i.NgaySinh,                 
+                    NgaySinh = i.NgaySinh,
                 });
             }
             return list;
@@ -46,7 +56,7 @@ namespace DoAnPBL3.BLL
             List<KhachHang_View> list = new List<KhachHang_View>();
             foreach (KhachHang_View i in GetAllKHView())
             {
-                if (i.TenKH.Contains(txt))
+                if (i.TenKH.ToLower().Contains(txt.ToLower()))
                 {
                     list.Add(i);
                 }
@@ -75,7 +85,7 @@ namespace DoAnPBL3.BLL
                 c.TenKH = s.TenKH;
                 c.NgaySinh = s.NgaySinh;
                 c.GioiTinh = s.GioiTinh;
-                c.DiaChi = s.DiaChi;             
+                c.DiaChi = s.DiaChi;
                 c.SDT = s.SDT;
                 c.CCCD = s.CCCD;
                 db.SaveChanges();
@@ -117,7 +127,7 @@ namespace DoAnPBL3.BLL
                         GioiTinh = i.GioiTinh,
                         DiaChi = i.DiaChi,
                         SDT = i.SDT,
-                        CCCD = i.CCCD,                
+                        CCCD = i.CCCD,
                     };
                 }
             }

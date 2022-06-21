@@ -25,13 +25,12 @@ namespace DoAnPBL3.DTO
         [StringLength(9)]
         public string MaGT { get; set; }
         
-
         [StringLength(9)]
         public string MaKH { get; set; }
-        
 
         [StringLength(9)]
         public string MaNV { get; set; }
+        public double Tongtien { get; set; }
         [ForeignKey("MaKH")]
         public virtual KhachHang KhachHang { get; set; }
         [ForeignKey("MaNV")]

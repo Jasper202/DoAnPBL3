@@ -28,6 +28,9 @@ namespace DoAnPBL3
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
             dataGridView_SP.DataSource = SanPhamBLL.Instance.GetAllSPView();
             dataGridView_KH.DataSource = KhachHangBLL.Instance.GetAllKHView();
+            dataGridView_HV.DataSource = HVBLL.Instance.GetAllHVView();
+            dataGridView_GT.DataSource = GoiTapBLL.Instance.GetAllGTView();
+            SetCBBGoiTap();
         }
 
 
@@ -86,6 +89,8 @@ namespace DoAnPBL3
             }
         }
 
+
+        //QUẢN LÍ NHÂN VIÊN
         public void ShowNV(string txt)
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
@@ -114,13 +119,22 @@ namespace DoAnPBL3
             List<string> LNV = new List<string>();
             if (dataGridView_NV.SelectedRows.Count >= 0)
             {
-                foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
+                try
                 {
-                    LNV.Add(i.Cells["MaNV"].Value.ToString());
+                    foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
+                    {
+                        LNV.Add(i.Cells["MaNV"].Value.ToString());
+                    }
+                    NhanVienBLL.Instance.DelNV(LNV);
+                    ShowNV("");
                 }
-                NhanVienBLL.Instance.DelNV(LNV);
+                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa nhân viên này");
+                }
             }
-            ShowNV("");
+            
         }
 
         private void btnSearch_NV_Click(object sender, EventArgs e)
@@ -181,19 +195,28 @@ namespace DoAnPBL3
             List<string> LSP = new List<string>();
             if (dataGridView_SP.SelectedRows.Count >= 0)
             {
-                foreach (DataGridViewRow i in dataGridView_SP.SelectedRows)
+                try
                 {
-                    LSP.Add(i.Cells["MaSP"].Value.ToString());
+                    foreach (DataGridViewRow i in dataGridView_SP.SelectedRows)
+                    {
+                        LSP.Add(i.Cells["MaSP"].Value.ToString());
+                    }
+                    SanPhamBLL.Instance.DelSP(LSP);
+                    ShowSP("");
                 }
-                SanPhamBLL.Instance.DelSP(LSP);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể sản phẩm này");
+                }
+
             }
-            ShowSP("");
+            
         }
 
         private void btnSearch_SP_Click(object sender, EventArgs e)
         {
-            string txt = txtSearch_SP.Text;
-            dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
+            
+            dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txtSearch_SP.Text);
         }
         private void dataGridView_SP_Click(object sender, EventArgs e)
         {
@@ -247,13 +270,22 @@ namespace DoAnPBL3
             List<string> LKH = new List<string>();
             if (dataGridView_KH.SelectedRows.Count >= 0)
             {
-                foreach (DataGridViewRow i in dataGridView_KH.SelectedRows)
+                try
                 {
-                    LKH.Add(i.Cells["MaKH"].Value.ToString());
+                    foreach (DataGridViewRow i in dataGridView_KH.SelectedRows)
+                    {
+                        LKH.Add(i.Cells["MaKH"].Value.ToString());
+                    }
+                    KhachHangBLL.Instance.DelKH(LKH);
+                    ShowKH("");
                 }
-                KhachHangBLL.Instance.DelKH(LKH);
+                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa khách hàng này");
+                }
             }
-            ShowKH("");
+            
         }
 
         private void dataGridView_KH_Click(object sender, EventArgs e)
@@ -271,14 +303,151 @@ namespace DoAnPBL3
 
         private void btnSearch_KH_Click(object sender, EventArgs e)
         {
-            string txt = txtSearchKH.Text;
-            dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txt);
+            
+            dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txtSearchKH.Text);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        
+        //QUẢN LÍ HỘI VIÊN
+        public void ShowHV(string txt)
         {
+            dataGridView_HV.DataSource = HVBLL.Instance.GetHVViewByName(txt);
+        }
+        private void btn_Add_HV_Click(object sender, EventArgs e)
+        {
+            ThemHoiVien f = new ThemHoiVien("");
+            f.d2 = new ThemHoiVien.MyDel(ShowHV);
+            f.Show();
+        }
+
+        private void btn_Up_HV_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_HV.SelectedRows.Count == 1)
+            {
+                HV_View _select = dataGridView_HV.SelectedRows[0].DataBoundItem as HV_View;
+                ThemHoiVien f = new ThemHoiVien(_select.MaHV);
+                f.d2 = new ThemHoiVien.MyDel(ShowHV);
+                f.Show();
+            }
+        }
+
+        private void btn_Del_HV_Click(object sender, EventArgs e)
+        {
+            List<string> LHV = new List<string>();
+            if (dataGridView_HV.SelectedRows.Count >= 0)
+            {
+                try
+                {
+                    foreach (DataGridViewRow i in dataGridView_HV.SelectedRows)
+                    {
+                        LHV.Add(i.Cells["MaHV"].Value.ToString());
+                    }
+                    HVBLL.Instance.DelHV(LHV);
+                    ShowHV("");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa hội viên này");
+                }
+                
+            }
+            
+        }
+
+        private void btnSearch_HV_Click(object sender, EventArgs e)
+        {
+            dataGridView_HV.DataSource = HVBLL.Instance.GetHVViewByName(txtSearchHV.Text);
+        }
+
+        private void dataGridView_HV_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_HV.SelectedRows.Count == 1)
+            {
+                HV_View _select = dataGridView_HV.SelectedRows[0].DataBoundItem as HV_View;
+                txtMa_HV.Text = _select.MaHV;
+                txtTen_HV.Text = _select.TenHV;
+                txtGoiTap_HV.Text = _select.GoiTap;
+                dateHetHan_HV.Value = _select.NgayKT;
+                txtSDT_HV.Text = _select.SDT;
+               
+                if (_select.GioiTinh)
+                {
+                    rbtnNam_HV.Checked = true;
+                }
+                else
+                {
+                    rbtnNu_HV.Checked = true;
+                }
+            }
+        }
+
+
+        //QUẢN LÍ GÓI TẬP
+
+        public void ShowGT(string txt)
+        {
+            dataGridView_GT.DataSource = GoiTapBLL.Instance.GetGTViewByMaGT(txt);
+        }
+        private void button4_Click(object sender, EventArgs e)//tìm kiếm
+        {
+            dataGridView_GT.DataSource = GoiTapBLL.Instance.GetGTViewByMaGT(txtMa_GT.Text);
+        }
+
+        private void button5_Click(object sender, EventArgs e)//Gia hạn
+        {
+            if (dataGridView_GT.SelectedRows.Count == 1)
+            {
+                GoiTap_View _select = dataGridView_GT.SelectedRows[0].DataBoundItem as GoiTap_View;
+                GiaHanGoiTap f = new GiaHanGoiTap(_select.MaHV);
+                f.d2 = new GiaHanGoiTap.MyDel(ShowGT);
+                f.Show();
+            }    
+               
+        }
+        private void button6_Click(object sender, EventArgs e)//Xem gói tập
+        {
+
             XemGoiTap f = new XemGoiTap();
             f.Show();
+        }
+
+        private void dateHan_GT_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void SetCBBGoiTap()
+        {
+            cbbGoi_GT.Items.AddRange(GoiTapBLL.Instance.GetCBBGoiTap().ToArray());
+        }
+        private void dataGridView_GT_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_GT.SelectedRows.Count == 1)
+            {
+                GoiTap_View _select = dataGridView_GT.SelectedRows[0].DataBoundItem as GoiTap_View;
+                txtMa_GT.Text = _select.MaHV;
+                dateNgayDK.Value = _select.NgayDK;
+                dateHan_GT.Value = _select.NgayKT;
+                if (_select.GoiTap.ToLower() == "gói 1 tháng")
+                {
+                    cbbGoi_GT.SelectedIndex = 0;
+                }
+                if (_select.GoiTap.ToLower() == "gói 3 tháng")
+                {
+                    cbbGoi_GT.SelectedIndex = 1;
+                }
+                if (_select.GoiTap.ToLower() == "gói 6 tháng")
+                {
+                    cbbGoi_GT.SelectedIndex = 2;
+                }
+                if (_select.GoiTap.ToLower() == "gói 9 tháng")
+                {
+                    cbbGoi_GT.SelectedIndex = 3;
+                }
+                if (_select.GoiTap.ToLower() == "gói 12 tháng")
+                {
+                    cbbGoi_GT.SelectedIndex = 4;
+                }
+            }    
         }
     }
 }

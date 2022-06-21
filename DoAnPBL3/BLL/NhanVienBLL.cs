@@ -118,7 +118,14 @@ namespace DoAnPBL3.BLL
             {
                 if (s != "")
                 {
-                    db.NhanViens.Remove(db.NhanViens.Find(s));
+                    try
+                    {
+                        db.NhanViens.Remove(db.NhanViens.Find(s));
+                    }
+                    catch(Exception ex)
+                    {
+                        throw(ex);
+                    }
                     db.SaveChanges();
                 }
             }

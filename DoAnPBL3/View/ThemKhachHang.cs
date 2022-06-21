@@ -21,17 +21,17 @@ namespace DoAnPBL3
         public ThemKhachHang(string m)
         {
             MaKH = m;
-            InitializeComponent();         
+            InitializeComponent();
             GUI();
 
-        }    
+        }
         public void GUI()
         {
             if (MaKH == "") return;
             KhachHang s = KhachHangBLL.Instance.GetKHByMaKH(MaKH);
             txtThemMaKH.Enabled = false;
             txtThemMaKH.Text = s.MaKH;
-            txtThemTenKH.Text = s.TenKH;          
+            txtThemTenKH.Text = s.TenKH;
             if (s.GioiTinh)
             {
                 rdoKHNam.Checked = true;
@@ -43,24 +43,31 @@ namespace DoAnPBL3
             txtThemSDTKH.Text = s.SDT;
             txtThemDiaChiKH.Text = s.DiaChi;
             dateNSKH.Value = s.NgaySinh;
-            txtCCCD.Text = s.CCCD;          
+            txtCCCD.Text = s.CCCD;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-             KhachHang s = new KhachHang
-             {       
-                MaKH = txtThemMaKH.Text,
-                TenKH = txtThemTenKH.Text,
-                //GioiTinh = rdoNVNam.Checked,
-                NgaySinh = dateNSKH.Value.Date,
-                DiaChi = txtThemDiaChiKH.Text,
-                SDT = txtThemSDTKH.Text,
-                CCCD = txtCCCD.Text,              
-            };
-            KhachHangBLL.Instance.AddUpdateKH(s);
-            d1("");
-            this.Dispose();
+            try
+            {
+                KhachHang s = new KhachHang
+                {
+                    MaKH = txtThemMaKH.Text,
+                    TenKH = txtThemTenKH.Text,
+                    GioiTinh = rdoKHNam.Checked,
+                    NgaySinh = dateNSKH.Value.Date,
+                    DiaChi = txtThemDiaChiKH.Text,
+                    SDT = txtThemSDTKH.Text,
+                    CCCD = txtCCCD.Text,
+                };
+                KhachHangBLL.Instance.AddUpdateKH(s);
+                d1("");
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

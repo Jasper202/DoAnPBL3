@@ -9,7 +9,7 @@ using DoAnPBL3.DTO;
 namespace DoAnPBL3
 {
     public class CreateDB :
-        //CreateDatabaseIfNotExists<QLGym>
+    //CreateDatabaseIfNotExists<QLGym>
     DropCreateDatabaseIfModelChanges<QLGym>
     //DropCreateDatabaseIfModelChanges<QLGym>
     //DropCreateDatabaseAlways<QLGym>
@@ -37,7 +37,7 @@ namespace DoAnPBL3
                 new NhanVien { MaNV = "NV07", TenNV = "Phúc", NgaySinh = new DateTime(2002, 1, 7), GioiTinh = true, DiaChi = "Quảng Bình", MaTK = "7", SDT = "0941618712", CCCD = "10220011231" },
             });
             context.KhachHangs.AddRange(new KhachHang[]
-            { 
+            {
                 new KhachHang { MaKH="KH01", TenKH="Tiến Đạt",NgaySinh=new DateTime(1999,3,9),GioiTinh=false,DiaChi="Quảng Nam",SDT="091135345",CCCD="123456789" },
                 new KhachHang { MaKH="KH02", TenKH="Ngọc Đạt",NgaySinh=new DateTime(1998,4,8),GioiTinh=true,DiaChi="Đà Nẵng",SDT="09235345",CCCD="123532462" },
                 new KhachHang { MaKH="KH03", TenKH="Tiên Sang",NgaySinh=new DateTime(1995,5,7),GioiTinh=false,DiaChi="Huế",SDT="094135345",CCCD="1532352462" },
@@ -56,11 +56,13 @@ namespace DoAnPBL3
             });
             context.SanPhams.AddRange(new SanPham[]
             {
-                new SanPham{ MaSP="SP01",TenSP="Whey Protein",MaLH="LH01",DonGia=100.000,SoLuongCon=30,NgayNhap=new DateTime(2022,3,5),HanSuDung=new DateTime(2023,8,7)},
-                new SanPham{ MaSP="SP02",TenSP="BCAA",MaLH="LH02",DonGia=200.000,SoLuongCon=25,NgayNhap=new DateTime(2022,7,5),HanSuDung=new DateTime(2023,3,7)},
-                new SanPham{ MaSP="SP03",TenSP="Pre Workout",MaLH="LH03",DonGia=300.000,SoLuongCon=26,NgayNhap=new DateTime(2022,2,4),HanSuDung=new DateTime(2024,2,3)},
-                new SanPham{ MaSP="SP04",TenSP="Mass",MaLH="LH04",DonGia=400.000,SoLuongCon=28,NgayNhap=new DateTime(2022,7,3),HanSuDung=new DateTime(2022,8,12)},
-                new SanPham{ MaSP="SP05",TenSP="TNH",MaLH="LH05",DonGia=500.000,SoLuongCon=22,NgayNhap=new DateTime(2022,8,5),HanSuDung=new DateTime(2022,7,11)},
+                new SanPham{ MaSP="SP01",TenSP="Whey Protein",MaLH="LH01",DonGia=100000,SoLuongCon=70,NgayNhap=new DateTime(2022,3,5),HanSuDung=new DateTime(2023,8,7)},
+                new SanPham{ MaSP="SP02",TenSP="BCAA",MaLH="LH02",DonGia=200000,SoLuongCon=80,NgayNhap=new DateTime(2022,7,5),HanSuDung=new DateTime(2023,3,7)},
+                new SanPham{ MaSP="SP03",TenSP="Pre Workout",MaLH="LH03",DonGia=300000,SoLuongCon=60,NgayNhap=new DateTime(2022,2,4),HanSuDung=new DateTime(2024,2,3)},
+                new SanPham{ MaSP="SP04",TenSP="Mass",MaLH="LH04",DonGia=400000,SoLuongCon=28,NgayNhap=new DateTime(2022,7,3),HanSuDung=new DateTime(2023,8,12)},
+                new SanPham{ MaSP="SP05",TenSP="TNH",MaLH="LH05",DonGia=500000,SoLuongCon=35,NgayNhap=new DateTime(2022,8,5),HanSuDung=new DateTime(2023,7,11)},
+                new SanPham{ MaSP="SP06",TenSP="Cali",MaLH="LH03",DonGia=700000,SoLuongCon=22,NgayNhap=new DateTime(2022,8,5),HanSuDung=new DateTime(2023,8,11)},
+                new SanPham{ MaSP="SP07",TenSP="Bro",MaLH="LH04",DonGia=350000,SoLuongCon=20,NgayNhap=new DateTime(2022,8,5),HanSuDung=new DateTime(2023,9,11)},
             });
             context.LoaiHangs.AddRange(new LoaiHang[]
             {
@@ -72,13 +74,51 @@ namespace DoAnPBL3
             });
             context.HoaDons.AddRange(new HoaDon[]
             {
-                new HoaDon{MaHD="HD01",NgayHD=DateTime.Now,MaNV="NV01",MaKH="KH03",TongHD=300.000},
-                new HoaDon{MaHD="HD02",NgayHD=DateTime.Now,MaNV="NV04",MaKH="KH01",TongHD=100.000},
-                new HoaDon{MaHD="HD03",NgayHD=DateTime.Now,MaNV="NV03",MaKH="KH04",TongHD=200.000},
-                new HoaDon{MaHD="HD04",NgayHD=DateTime.Now,MaNV="NV02",MaKH="KH02",TongHD=300.000},
-                new HoaDon{MaHD="HD05",NgayHD=DateTime.Now,MaNV="NV05",MaKH="KH05",TongHD=500.000},
+                new HoaDon{MaHD="HD01",NgayHD=DateTime.Now,MaNV="NV01",MaKH="KH03",TongHD=300000},
+                new HoaDon{MaHD="HD02",NgayHD=DateTime.Now,MaNV="NV04",MaKH="KH01",TongHD=100000},
+                new HoaDon{MaHD="HD03",NgayHD=DateTime.Now,MaNV="NV03",MaKH="KH04",TongHD=200000},
+                new HoaDon{MaHD="HD04",NgayHD=DateTime.Now,MaNV="NV02",MaKH="KH02",TongHD=300000},
+                new HoaDon{MaHD="HD05",NgayHD=DateTime.Now,MaNV="NV05",MaKH="KH05",TongHD=500000},
             });
-            
+            context.CTHDs.AddRange(new CTHD[]
+                {
+                    new CTHD{MaCTHD = "CT01", MaHD = "HD01", SoLuong = 1, MaSP = "SP03", Gia = 300000},
+                    new CTHD{MaCTHD = "CT02", MaHD = "HD02", SoLuong = 1, MaSP = "SP01", Gia = 100000},
+                    new CTHD{MaCTHD = "CT03", MaHD = "HD03", SoLuong = 1, MaSP = "SP02", Gia = 200000},
+                    new CTHD{MaCTHD = "CT04", MaHD = "HD04", SoLuong = 1, MaSP = "SP01", Gia = 100000},
+                    new CTHD{MaCTHD = "CT05", MaHD = "HD04", SoLuong = 1, MaSP = "SP02", Gia = 200000},
+                    new CTHD{MaCTHD = "CT06", MaHD = "HD05", SoLuong = 1, MaSP = "SP04", Gia = 400000},
+                    new CTHD{MaCTHD = "CT07", MaHD = "HD05", SoLuong = 1, MaSP = "SP01", Gia = 100000},
+                });
+            context.GoiTaps.AddRange(new GoiTap[]
+                {
+                    new GoiTap{MaGT = "GT01", TenGT = "Gói 1 tháng", ThoiHan = "1 Tháng", Gia = 300000},
+                    new GoiTap{MaGT = "GT02", TenGT = "Gói 3 tháng", ThoiHan = "1 Tháng", Gia = 750000},
+                    new GoiTap{MaGT = "GT03", TenGT = "Gói 6 tháng", ThoiHan = "1 Tháng", Gia = 1350000},
+                    new GoiTap{MaGT = "GT04", TenGT = "Gói 9 tháng", ThoiHan = "1 Tháng", Gia = 1890000},
+                    new GoiTap{MaGT = "GT05", TenGT = "Gói 12 tháng", ThoiHan = "1 Tháng", Gia = 2400000},
+
+
+                });
+            context.TheHVs.AddRange(new TheHV[]
+            {
+                new TheHV{MaHV = "HV01", NgayDK = new DateTime(2022,8,5), NgayKT = new DateTime(2022,11,5), MaGT = "GT02", MaKH ="KH02", MaNV= "NV01", Tongtien = 750000},
+                new TheHV{MaHV = "HV02", NgayDK = new DateTime(2022,8,5), NgayKT = new DateTime(2022,2,5), MaGT = "GT03", MaKH ="KH03", MaNV= "NV01", Tongtien = 1350000},
+                new TheHV{MaHV = "HV03", NgayDK = new DateTime(2022,1,5), NgayKT = new DateTime(2023,1,5), MaGT = "GT05", MaKH ="KH04", MaNV= "NV02", Tongtien = 2400000},
+                new TheHV{MaHV = "HV04", NgayDK = new DateTime(2022,8,5), NgayKT = new DateTime(2022,11,5), MaGT = "GT02", MaKH ="KH05", MaNV= "NV03", Tongtien = 750000},
+                new TheHV{MaHV = "HV05", NgayDK = new DateTime(2022,8,5), NgayKT = new DateTime(2022,2,5), MaGT = "GT02", MaKH ="KH06", MaNV= "NV01", Tongtien = 1500000},
+
+            });
+            context.LichSu_GHs.AddRange(new LichSu_GH[]
+            {
+                new LichSu_GH { MaLS ="LS01", MaHV = "HV01", NgayGH = new DateTime(2022,8,5), ThoigianGH = "3 tháng", MaNV = "NV01", Gia = 750000},
+                new LichSu_GH { MaLS ="LS02", MaHV = "HV02", NgayGH = new DateTime(2022,8,5), ThoigianGH = "6 tháng", MaNV = "NV01", Gia = 1350000},
+                new LichSu_GH { MaLS ="LS03", MaHV = "HV03", NgayGH = new DateTime(2022,1,5), ThoigianGH = "12 tháng", MaNV = "NV02", Gia = 2400000},
+                new LichSu_GH { MaLS ="LS04", MaHV = "HV04", NgayGH = new DateTime(2022,8,5), ThoigianGH = "3 tháng", MaNV = "NV03", Gia = 750000},
+                new LichSu_GH { MaLS ="LS05", MaHV = "HV05", NgayGH = new DateTime(2022,8,5), ThoigianGH = "3 tháng", MaNV = "NV01", Gia = 750000},
+                new LichSu_GH { MaLS ="LS06", MaHV = "HV05", NgayGH = DateTime.Now, ThoigianGH = "3 tháng", MaNV = "NV01", Gia = 750000},
+            });
+
         }
     }
 }
