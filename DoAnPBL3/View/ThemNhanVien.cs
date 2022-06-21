@@ -29,7 +29,7 @@ namespace DoAnPBL3
         public void SetCBBChucVu()
         {
             cbbVTNV.Items.AddRange(NhanVienBLL.Instance.GetCBBChucVu().ToArray());
-        }   
+        }
         public void GUI()
         {
             if (MaNV == "") return;
@@ -37,14 +37,14 @@ namespace DoAnPBL3
             txtMaNV.Enabled = false;
             txtMaNV.Text = s.MaNV;
             txtTenNV.Text = s.TenNV;
-            if(s.GioiTinh)
+            if (s.GioiTinh)
             {
                 rdoNVNam.Checked = true;
-            }    
+            }
             else
             {
                 rdoNVNam.Checked = false;
-            }    
+            }
             txtSDTNV.Text = s.SDT;
             txtDiachiNV.Text = s.DiaChi;
             NgaySinhNV.Value = s.NgaySinh;
@@ -61,20 +61,29 @@ namespace DoAnPBL3
 
         private void btnLuuNV_Click_1(object sender, EventArgs e)
         {
-            NhanVien s = new NhanVien
+            if(txtDiachiNV.Text == "" || txtMaNV.Text == "" || txtSoCCCNV.Text == "" ||txtTenNV.Text=="" ||txtSDTNV.Text ==""|| cbbVTNV.SelectedItem == null)
             {
-                MaNV = txtMaNV.Text,
-                TenNV = txtTenNV.Text,
-                GioiTinh = rdoNVNam.Checked,
-                NgaySinh = NgaySinhNV.Value.Date,
-                DiaChi = txtDiachiNV.Text,
-                SDT = txtSDTNV.Text,
-                CCCD = txtSoCCCNV.Text,
-                MaTK = (((CBBItem)cbbVTNV.SelectedItem).Value).ToString(),
-            };
-            NhanVienBLL.Instance.AddUpdate(s);
-            d("");
-            this.Dispose();
+                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
+            }
+            else
+            {
+                NhanVien s = new NhanVien
+                {
+                    MaNV = txtMaNV.Text,
+                    TenNV = txtTenNV.Text,
+                    GioiTinh = rdoNVNam.Checked,
+                    NgaySinh = NgaySinhNV.Value.Date,
+                    DiaChi = txtDiachiNV.Text,
+                    SDT = txtSDTNV.Text,
+                    CCCD = txtSoCCCNV.Text,
+                    MaTK = (((CBBItem)cbbVTNV.SelectedItem).Value).ToString(),
+                };
+                NhanVienBLL.Instance.AddUpdate(s);
+                d("");
+                this.Dispose();
+            }    
+                
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

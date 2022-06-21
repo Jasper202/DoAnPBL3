@@ -38,6 +38,8 @@ namespace DoAnPBL3
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@ namespace DoAnPBL3
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 85);
+            this.label2.Location = new System.Drawing.Point(31, 107);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
@@ -56,7 +58,7 @@ namespace DoAnPBL3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 126);
+            this.label3.Location = new System.Drawing.Point(31, 148);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
@@ -65,7 +67,7 @@ namespace DoAnPBL3
             // 
             // txtGiaHanMaHV
             // 
-            this.txtGiaHanMaHV.Location = new System.Drawing.Point(147, 82);
+            this.txtGiaHanMaHV.Location = new System.Drawing.Point(147, 104);
             this.txtGiaHanMaHV.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaHanMaHV.Name = "txtGiaHanMaHV";
             this.txtGiaHanMaHV.Size = new System.Drawing.Size(150, 26);
@@ -87,7 +89,7 @@ namespace DoAnPBL3
             // cboGiaHanGoiTap
             // 
             this.cboGiaHanGoiTap.FormattingEnabled = true;
-            this.cboGiaHanGoiTap.Location = new System.Drawing.Point(147, 123);
+            this.cboGiaHanGoiTap.Location = new System.Drawing.Point(147, 145);
             this.cboGiaHanGoiTap.Margin = new System.Windows.Forms.Padding(2);
             this.cboGiaHanGoiTap.Name = "cboGiaHanGoiTap";
             this.cboGiaHanGoiTap.Size = new System.Drawing.Size(150, 28);
@@ -97,7 +99,9 @@ namespace DoAnPBL3
             // 
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txtGiaHanMaHV);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cboGiaHanGoiTap);
             this.groupBox1.Controls.Add(this.btnThoat);
@@ -138,6 +142,26 @@ namespace DoAnPBL3
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã gia hạn";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(147, 62);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 26);
+            this.textBox1.TabIndex = 2;
             // 
             // GiaHanGoiTap
             // 
@@ -166,5 +190,7 @@ namespace DoAnPBL3
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

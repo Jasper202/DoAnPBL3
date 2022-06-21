@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\GiaHanBLL.cs" />
+    <Compile Include="BLL\GoiTapBLL.cs" />
+    <Compile Include="BLL\HVBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
@@ -64,7 +67,9 @@
     <Compile Include="DTO\CBBItem2.cs" />
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\GoiTap.cs" />
+    <Compile Include="DTO\GoiTap_View.cs" />
     <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\HV_View.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhachHang_View.cs" />
     <Compile Include="DTO\LichSu_GH.cs" />
