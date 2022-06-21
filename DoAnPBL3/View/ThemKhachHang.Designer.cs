@@ -37,18 +37,18 @@ namespace DoAnPBL3
             this.txtThemTenKH = new System.Windows.Forms.TextBox();
             this.txtThemSDTKH = new System.Windows.Forms.TextBox();
             this.txtThemDiaChiKH = new System.Windows.Forms.TextBox();
-            this.dateNS = new System.Windows.Forms.DateTimePicker();
+            this.dateNSKH = new System.Windows.Forms.DateTimePicker();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnNu = new System.Windows.Forms.RadioButton();
-            this.rbtnNam = new System.Windows.Forms.RadioButton();
+            this.rdoKHNu = new System.Windows.Forms.RadioButton();
+            this.rdoKHNam = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtCCCD = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtThemMaKH = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,13 +112,13 @@ namespace DoAnPBL3
             this.txtThemDiaChiKH.Size = new System.Drawing.Size(345, 30);
             this.txtThemDiaChiKH.TabIndex = 1;
             // 
-            // dateNS
+            // dateNSKH
             // 
-            this.dateNS.Location = new System.Drawing.Point(225, 143);
-            this.dateNS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateNS.Name = "dateNS";
-            this.dateNS.Size = new System.Drawing.Size(345, 30);
-            this.dateNS.TabIndex = 2;
+            this.dateNSKH.Location = new System.Drawing.Point(225, 143);
+            this.dateNSKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateNSKH.Name = "dateNSKH";
+            this.dateNSKH.Size = new System.Drawing.Size(345, 30);
+            this.dateNSKH.TabIndex = 2;
             // 
             // btnLuu
             // 
@@ -147,8 +147,8 @@ namespace DoAnPBL3
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Aqua;
-            this.groupBox1.Controls.Add(this.rbtnNu);
-            this.groupBox1.Controls.Add(this.rbtnNam);
+            this.groupBox1.Controls.Add(this.rdoKHNu);
+            this.groupBox1.Controls.Add(this.rdoKHNam);
             this.groupBox1.Controls.Add(this.txtThemTenKH);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -158,7 +158,7 @@ namespace DoAnPBL3
             this.groupBox1.Controls.Add(this.txtThemMaKH);
             this.groupBox1.Controls.Add(this.txtCCCD);
             this.groupBox1.Controls.Add(this.txtThemDiaChiKH);
-            this.groupBox1.Controls.Add(this.dateNS);
+            this.groupBox1.Controls.Add(this.dateNSKH);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtThemSDTKH);
@@ -167,37 +167,37 @@ namespace DoAnPBL3
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(680, 498);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm Khách hàng";
             // 
-            // rbtnNu
+            // rdoKHNu
             // 
-            this.rbtnNu.AutoSize = true;
-            this.rbtnNu.Location = new System.Drawing.Point(337, 97);
-            this.rbtnNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rbtnNu.Name = "rbtnNu";
-            this.rbtnNu.Size = new System.Drawing.Size(58, 29);
-            this.rbtnNu.TabIndex = 5;
-            this.rbtnNu.TabStop = true;
-            this.rbtnNu.Text = "Nữ";
-            this.rbtnNu.UseVisualStyleBackColor = true;
+            this.rdoKHNu.AutoSize = true;
+            this.rdoKHNu.Location = new System.Drawing.Point(337, 97);
+            this.rdoKHNu.Margin = new System.Windows.Forms.Padding(4);
+            this.rdoKHNu.Name = "rdoKHNu";
+            this.rdoKHNu.Size = new System.Drawing.Size(58, 29);
+            this.rdoKHNu.TabIndex = 5;
+            this.rdoKHNu.TabStop = true;
+            this.rdoKHNu.Text = "Nữ";
+            this.rdoKHNu.UseVisualStyleBackColor = true;
             // 
-            // rbtnNam
+            // rdoKHNam
             // 
-            this.rbtnNam.AutoSize = true;
-            this.rbtnNam.Location = new System.Drawing.Point(225, 97);
-            this.rbtnNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rbtnNam.Name = "rbtnNam";
-            this.rbtnNam.Size = new System.Drawing.Size(74, 29);
-            this.rbtnNam.TabIndex = 4;
-            this.rbtnNam.TabStop = true;
-            this.rbtnNam.Text = "Nam";
-            this.rbtnNam.UseVisualStyleBackColor = true;
+            this.rdoKHNam.AutoSize = true;
+            this.rdoKHNam.Location = new System.Drawing.Point(225, 97);
+            this.rdoKHNam.Margin = new System.Windows.Forms.Padding(4);
+            this.rdoKHNam.Name = "rdoKHNam";
+            this.rdoKHNam.Size = new System.Drawing.Size(74, 29);
+            this.rdoKHNam.TabIndex = 4;
+            this.rdoKHNam.TabStop = true;
+            this.rdoKHNam.Text = "Nam";
+            this.rdoKHNam.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -230,6 +230,14 @@ namespace DoAnPBL3
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // txtThemMaKH
+            // 
+            this.txtThemMaKH.Location = new System.Drawing.Point(227, 365);
+            this.txtThemMaKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtThemMaKH.Name = "txtThemMaKH";
+            this.txtThemMaKH.Size = new System.Drawing.Size(345, 30);
+            this.txtThemMaKH.TabIndex = 1;
+            // 
             // txtCCCD
             // 
             this.txtCCCD.Location = new System.Drawing.Point(225, 315);
@@ -237,15 +245,6 @@ namespace DoAnPBL3
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(345, 30);
             this.txtCCCD.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 320);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 25);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Số CCCD:";
             // 
             // label1
             // 
@@ -256,13 +255,14 @@ namespace DoAnPBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã KH";
             // 
-            // txtThemMaKH
+            // label7
             // 
-            this.txtThemMaKH.Location = new System.Drawing.Point(227, 365);
-            this.txtThemMaKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtThemMaKH.Name = "txtThemMaKH";
-            this.txtThemMaKH.Size = new System.Drawing.Size(345, 30);
-            this.txtThemMaKH.TabIndex = 1;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(86, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 25);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Số CCCD:";
             // 
             // ThemKhachHang
             // 
@@ -288,12 +288,12 @@ namespace DoAnPBL3
         private System.Windows.Forms.TextBox txtThemTenKH;
         private System.Windows.Forms.TextBox txtThemSDTKH;
         private System.Windows.Forms.TextBox txtThemDiaChiKH;
-        private System.Windows.Forms.DateTimePicker dateNS;
+        private System.Windows.Forms.DateTimePicker dateNSKH;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbtnNu;
-        private System.Windows.Forms.RadioButton rbtnNam;
+        private System.Windows.Forms.RadioButton rdoKHNu;
+        private System.Windows.Forms.RadioButton rdoKHNam;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;

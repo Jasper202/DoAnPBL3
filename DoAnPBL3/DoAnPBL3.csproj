@@ -138,6 +138,12 @@
     <Compile Include="View\ThemSanPham.Designer.cs">
       <DependentUpon>ThemSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\XemGoiTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XemGoiTap.Designer.cs">
+      <DependentUpon>XemGoiTap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThemSanPham.resx">
       <DependentUpon>ThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XemGoiTap.resx">
+      <DependentUpon>XemGoiTap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -237,6 +246,8 @@
   <ItemGroup>
     <None Include="Resources\895a5da4-f72a-425c-808c-643698133fec1.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2022-06-21 091412.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

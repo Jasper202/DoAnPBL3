@@ -28,30 +28,22 @@ namespace DoAnPBL3
         public void GUI()
         {
             if (MaKH == "") return;
-            //NhanVien s = NhanVienBLL.Instance.GetNVByMaNV(MaNV);
-            //txtMaNV.Enabled = false;
-            //txtMaNV.Text = s.MaNV;
-            //txtTenNV.Text = s.TenNV;
-            //if (s.GioiTinh)
-            //{
-            //    rdoNVNam.Checked = true;
-            //}
-            //else
-            //{
-            //    rdoNVNam.Checked = false;
-            //}
-            //txtSDTNV.Text = s.SDT;
-            //txtDiachiNV.Text = s.DiaChi;
-            //NgaySinhNV.Value = s.NgaySinh;
-            //txtSoCCCNV.Text = s.CCCD;
-            //foreach (CBBItem i in cbbVTNV.Items)
-            //{
-            //    if (i.Value == NhanVienBLL.Instance.GetMaTKPByMaNV(s.MaNV))
-            //    {
-            //        cbbVTNV.SelectedItem = i;
-            //        break;
-            //    }
-            //}
+            KhachHang s = KhachHangBLL.Instance.GetKHByMaKH(MaKH);
+            txtThemMaKH.Enabled = false;
+            txtThemMaKH.Text = s.MaKH;
+            txtThemTenKH.Text = s.TenKH;          
+            if (s.GioiTinh)
+            {
+                rdoKHNam.Checked = true;
+            }
+            else
+            {
+                rdoKHNu.Checked = true;
+            }
+            txtThemSDTKH.Text = s.SDT;
+            txtThemDiaChiKH.Text = s.DiaChi;
+            dateNSKH.Value = s.NgaySinh;
+            txtCCCD.Text = s.CCCD;          
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -61,7 +53,7 @@ namespace DoAnPBL3
                 MaKH = txtThemMaKH.Text,
                 TenKH = txtThemTenKH.Text,
                 //GioiTinh = rdoNVNam.Checked,
-                NgaySinh = dateNS.Value.Date,
+                NgaySinh = dateNSKH.Value.Date,
                 DiaChi = txtThemDiaChiKH.Text,
                 SDT = txtThemSDTKH.Text,
                 CCCD = txtCCCD.Text,              
