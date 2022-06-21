@@ -46,7 +46,7 @@ namespace DoAnPBL3.BLL
         {
             List<NhanVien_View> list = new List<NhanVien_View>();   
             foreach(NhanVien i in db.NhanViens.Select(p=>p))
-            {
+            {              
                 list.Add(new NhanVien_View
                 {
                     MaNV = i.MaNV,

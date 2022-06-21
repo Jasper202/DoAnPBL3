@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAnPBL3.DTO;
 using DoAnPBL3.BLL;
+using DoAnPBL3.View;
 
 namespace DoAnPBL3
 {
-    
+
     public partial class Main : Form
     {
         QLGym db = new QLGym();
         public Main()
         {
-           InitializeComponent();           
-           Load();
+            InitializeComponent();
+            Load();
 
         }
         public void Load()
@@ -29,7 +30,7 @@ namespace DoAnPBL3
             dataGridView_KH.DataSource = KhachHangBLL.Instance.GetAllKHView();
         }
 
-        
+
 
         private void btnMenu1_Click(object sender, EventArgs e)
         {
@@ -85,20 +86,6 @@ namespace DoAnPBL3
             }
         }
 
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            //12345
-        }
         public void ShowNV(string txt)
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
@@ -134,13 +121,38 @@ namespace DoAnPBL3
                 NhanVienBLL.Instance.DelNV(LNV);
             }
             ShowNV("");
-        }     
+        }
 
         private void btnSearch_NV_Click(object sender, EventArgs e)
         {
             string txt = txtSearch_NV.Text;
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetNVViewBySearch(txt);
         }
+
+        private void dataGridView_NV_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_NV.SelectedRows.Count == 1)
+            {
+                NhanVien_View _select = dataGridView_NV.SelectedRows[0].DataBoundItem as NhanVien_View;
+                txtMa_NV.Text = _select.MaNV;
+                txtTen_NV.Text = _select.TenNV;
+                if (_select.GioiTinh)
+                {
+                    rbtnNam_NV.Checked = true;
+                }
+                else
+                {
+                    rbtnNu_NV.Checked = true;
+                }
+                txtSDT_NV.Text = _select.SDT;
+                txtCCCD_NV.Text = _select.CCCD;
+                txtVitri_NV.Text = _select.ChucVu;
+
+            }
+
+        }
+        /// QUẢN LÝ SẢN PHẨM
+        
         public void ShowSP(string txt)
         {
             dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
@@ -183,29 +195,29 @@ namespace DoAnPBL3
             string txt = txtSearch_SP.Text;
             dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
         }
-
-        private void dataGridView_NV_Click(object sender, EventArgs e)
+        private void dataGridView_SP_Click(object sender, EventArgs e)
         {
-            if (dataGridView_NV.SelectedRows.Count == 1)
+            if (dataGridView_SP.SelectedRows.Count == 1)
             {
-                NhanVien_View _select = dataGridView_NV.SelectedRows[0].DataBoundItem as NhanVien_View;
-                txtMa_NV.Text = _select.MaNV;
-                txtTen_NV.Text = _select.TenNV;
-                if (_select.GioiTinh)
+                SanPham_View sp = dataGridView_SP.SelectedRows[0].DataBoundItem as SanPham_View;
+                txtMa_SP.Text = sp.MaSP;
+                txtTen_SP.Text = sp.TenSP;
+                txtSoLuong_SP.Text = sp.SoLuong.ToString();
+                txtGia_SP.Text = sp.DonGia.ToString();
+                txtHangSX_SP.Text = sp.HangSX;
+                if (sp.SoLuong > 0)
                 {
-                    rbtnNam_NV.Checked = true;               
+                    txtTinhtrang_SP.Text = "Còn hàng";
                 }
                 else
                 {
-                    rbtnNu_NV.Checked = true; 
-                }    
-                txtSDT_NV.Text = _select.SDT;
-                txtCCCD_NV.Text = _select.CCCD;
-                txtVitri_NV.Text = _select.ChucVu;
-
+                    txtTinhtrang_SP.Text = "Hết hàng";
+                }
+                dateNgayNhap_SP.Value = sp.NgayNhap;
+                cbbLoai_SP.Text = sp.LoaiSP;
             }
-
         }
+
         /// QUẢN LÝ KHÁCH HÀNG
         public void ShowKH(string txt)
         {
@@ -252,7 +264,7 @@ namespace DoAnPBL3
                 txtMa_KH.Text = _select.MaKH;
                 txtTen_KH.Text = _select.TenKH;
                 dateNS_KH.Value = _select.NgaySinh;
-                txtSDT_KH.Text = _select.SDT;               
+                txtSDT_KH.Text = _select.SDT;
                 txtDiaChi_KH.Text = _select.DiaChi;
             }
         }
@@ -261,6 +273,12 @@ namespace DoAnPBL3
         {
             string txt = txtSearchKH.Text;
             dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txt);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            XemGoiTap f = new XemGoiTap();
+            f.Show();
         }
     }
 }

@@ -9,8 +9,8 @@ using DoAnPBL3.DTO;
 namespace DoAnPBL3
 {
     public class CreateDB :
-        CreateDatabaseIfNotExists<QLGym>
-    //DropCreateDatabaseIfModelChanges<QLGym>
+        //CreateDatabaseIfNotExists<QLGym>
+    DropCreateDatabaseIfModelChanges<QLGym>
     //DropCreateDatabaseIfModelChanges<QLGym>
     //DropCreateDatabaseAlways<QLGym>
     {
@@ -78,10 +78,7 @@ namespace DoAnPBL3
                 new HoaDon{MaHD="HD04",NgayHD=DateTime.Now,MaNV="NV02",MaKH="KH02",TongHD=300.000},
                 new HoaDon{MaHD="HD05",NgayHD=DateTime.Now,MaNV="NV05",MaKH="KH05",TongHD=500.000},
             });
-
-
-
-
+            
         }
     }
 }

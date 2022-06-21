@@ -193,6 +193,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2022_06_21_091412 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2022-06-21 091412", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Setup_mo_phong_tap_Kien_Gym_2_DN {
             get {
                 object obj = ResourceManager.GetObject("Setup-mo-phong-tap-Kien-Gym-2-DN", resourceCulture);

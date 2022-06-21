@@ -103,5 +103,37 @@ namespace DoAnPBL3.BLL
                 }
             }
         }
+        public KhachHang GetKHByMaKH(string MaKH)
+        {
+            foreach (KhachHang i in db.KhachHangs.Select(p => p))
+            {
+                if (i.MaKH == MaKH)
+                {
+                    return new KhachHang
+                    {
+                        MaKH = i.MaKH,
+                        TenKH = i.TenKH,
+                        NgaySinh = i.NgaySinh,
+                        GioiTinh = i.GioiTinh,
+                        DiaChi = i.DiaChi,
+                        SDT = i.SDT,
+                        CCCD = i.CCCD,                
+                    };
+                }
+            }
+            return null;
+        }
+        //public int GetMaKHByMaKH(string MaKH)
+        //{
+        //    foreach (KhachHang i in db.KhachHangs.Select(p => p))
+        //    {
+        //        if (i.MaKH == MaKH)
+        //        {
+        //            return Convert.ToInt32(i.MaT);
+        //        }
+        //    }
+        //    return 0;
+        //}
+
     }
 }
