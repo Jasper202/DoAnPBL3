@@ -710,6 +710,7 @@
             // 
             // dataGridView_SP
             // 
+            this.dataGridView_SP.AllowUserToResizeRows = false;
             this.dataGridView_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1475,6 +1476,7 @@
             // 
             // dataGridView_KH
             // 
+            this.dataGridView_KH.AllowUserToResizeRows = false;
             this.dataGridView_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
