@@ -20,7 +20,7 @@ namespace DoAnPBL3.DTO
         [StringLength(9)]
         [Required]
         public string MaHD { get; set; }
-        public DateTime NgayHD { get; set; }
+        public DateTime NgayBan { get; set; }
         [StringLength(9)]
         public string MaNV { get; set; }
         
