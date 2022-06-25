@@ -19,7 +19,8 @@ namespace DoAnPBL3.DTO
         public string MaHD { get; set; }
         
         public int SoLuong { get; set; }
-        
+        public DateTime NgayInHD { get; set; }
+
         [StringLength(9)]
         public string MaSP { get; set; }
         

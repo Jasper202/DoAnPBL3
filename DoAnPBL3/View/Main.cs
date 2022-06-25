@@ -128,13 +128,13 @@ namespace DoAnPBL3
                     NhanVienBLL.Instance.DelNV(LNV);
                     ShowNV("");
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Không thể xóa nhân viên này");
                 }
             }
-            
+
         }
 
         private void btnSearch_NV_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace DoAnPBL3
 
         }
         /// QUẢN LÝ SẢN PHẨM
-        
+
         public void ShowSP(string txt)
         {
             dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txt);
@@ -210,12 +210,12 @@ namespace DoAnPBL3
                 }
 
             }
-            
+
         }
 
         private void btnSearch_SP_Click(object sender, EventArgs e)
         {
-            
+
             dataGridView_SP.DataSource = SanPhamBLL.Instance.GetSPViewByName(txtSearch_SP.Text);
         }
         private void dataGridView_SP_Click(object sender, EventArgs e)
@@ -279,13 +279,13 @@ namespace DoAnPBL3
                     KhachHangBLL.Instance.DelKH(LKH);
                     ShowKH("");
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Không thể xóa khách hàng này");
                 }
             }
-            
+
         }
 
         private void dataGridView_KH_Click(object sender, EventArgs e)
@@ -303,11 +303,11 @@ namespace DoAnPBL3
 
         private void btnSearch_KH_Click(object sender, EventArgs e)
         {
-            
+
             dataGridView_KH.DataSource = KhachHangBLL.Instance.GetKHViewBySearch(txtSearchKH.Text);
         }
 
-        
+
         //QUẢN LÍ HỘI VIÊN
         public void ShowHV(string txt)
         {
@@ -349,9 +349,9 @@ namespace DoAnPBL3
                 {
                     MessageBox.Show("Không thể xóa hội viên này");
                 }
-                
+
             }
-            
+
         }
 
         private void btnSearch_HV_Click(object sender, EventArgs e)
@@ -369,7 +369,7 @@ namespace DoAnPBL3
                 txtGoiTap_HV.Text = _select.GoiTap;
                 dateHetHan_HV.Value = _select.NgayKT;
                 txtSDT_HV.Text = _select.SDT;
-               
+
                 if (_select.GioiTinh)
                 {
                     rbtnNam_HV.Checked = true;
@@ -401,8 +401,8 @@ namespace DoAnPBL3
                 GiaHanGoiTap f = new GiaHanGoiTap(_select.MaHV);
                 f.d2 = new GiaHanGoiTap.MyDel(ShowGT);
                 f.Show();
-            }    
-               
+            }
+
         }
         private void button6_Click(object sender, EventArgs e)//Xem gói tập
         {
@@ -447,7 +447,29 @@ namespace DoAnPBL3
                 {
                     cbbGoi_GT.SelectedIndex = 4;
                 }
+            }
+        }
+
+        private void butXemHD_Click(object sender, EventArgs e)
+        {
+            DateTime first = dateTimePicker3.Value;
+            DateTime last = dateTimePicker2.Value;
+            int result = DateTime.Compare(first, last);
+            if(result <= 0)
+            {
+                dtgHoaDon.DataSource = DanhThuBLL.Instance.GetHDViewByDate(first, last);
+            }        
+            else
+            {
+                MessageBox.Show("Vui lòng nhập thời gian hợp lệ !!!");
             }    
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Bill f = new Bill();
+            f.Show();
         }
     }
 }

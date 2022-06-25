@@ -30,31 +30,19 @@ namespace DoAnPBL3.BLL
         {
             List<HV_View> list = new List<HV_View>();
             
-            foreach (KhachHang j in KhachHangBLL.Instance.GetAllKH())
-            {
+            
                 foreach (TheHV i in db.TheHVs.Select(p => p))
                 {
-                    if (i.MaKH == j.MaKH)
-                    {
-                        try
-                        {
+                    
                             list.Add(new HV_View
                             {
                                 MaHV = i.MaHV,
-                                TenHV = j.TenKH,
-                                GioiTinh = j.GioiTinh,
-                                SDT = j.SDT,
+                                TenHV = i.KhachHang.TenKH,
+                                GioiTinh = i.KhachHang.GioiTinh,
+                                SDT = i.KhachHang.SDT,
                                 GoiTap = i.GoiTap.TenGT,
                                 NgayKT = i.NgayKT,
                             });
-                        }
-                        catch (Exception ex)
-                        {
-                            System.Windows.Forms.MessageBox.Show(ex.Message);
-                        }
-                    }
-                    
-                }
                 
             }
 
