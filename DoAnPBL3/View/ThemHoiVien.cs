@@ -82,14 +82,14 @@ namespace DoAnPBL3
 
         private void btnLuuHV_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 KhachHang s = new KhachHang
                 {
                     MaKH = txtMaKH.Text,
                     TenKH = txtThemTenHV.Text,
                     GioiTinh = rdoThemHVNam.Checked,
-                    NgaySinh = dateTimePicker1.Value.Date,
+                    NgaySinh = dateTimePicker1.Value,
                     DiaChi = txtDiachi.Text,
                     SDT = txtThemSdt.Text,
                     CCCD = txtCCCD.Text,
@@ -138,18 +138,20 @@ namespace DoAnPBL3
                     MaNV = "NV01"
                 };
                 
-                if (KhachHangBLL.Instance.Check(MaKH))
-                {
-                    KhachHangBLL.Instance.UpdateKH(s);
-                }    
+                //if (KhachHangBLL.Instance.Check(MaKH))
+                //{
+                //    KhachHangBLL.Instance.UpdateKH(s);
+                //}    
                 HVBLL.Instance.AddUpdateHV(i, s);
+            
+                
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
+            //}
             d2("");
-                this.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
-            }
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)

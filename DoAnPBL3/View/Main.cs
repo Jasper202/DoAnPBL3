@@ -471,5 +471,12 @@ namespace DoAnPBL3
             Bill f = new Bill();
             f.Show();
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Login f = new Login();
+            f.Visible = true;
+        }
     }
 }

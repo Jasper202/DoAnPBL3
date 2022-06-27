@@ -26,23 +26,38 @@ namespace DoAnPBL3.BLL
         private HVBLL()
         {
         }
+        public HV_View HVtoHVView(TheHV i)
+        {
+            string tenkh = "", SDT = "";
+            bool gt = true;
+            foreach(KhachHang k in db.KhachHangs.Select(p=>p))
+            {
+                if (k.MaKH == i.MaKH)
+                {
+                    tenkh = k.TenKH;
+                    SDT = k.SDT;
+                    gt = k.GioiTinh;
+                    Console.WriteLine(tenkh + " " + SDT + " " + gt);
+                }    
+            }    
+            return new HV_View
+            {
+                MaHV = i.MaHV,
+                TenHV = tenkh,
+                GioiTinh = gt,
+                SDT = SDT,
+                GoiTap = i.GoiTap.TenGT,
+                NgayKT = i.NgayKT,
+            };
+
+        }
         public List<HV_View> GetAllHVView()
         {
             List<HV_View> list = new List<HV_View>();
             
-            
                 foreach (TheHV i in db.TheHVs.Select(p => p))
                 {
-                    
-                            list.Add(new HV_View
-                            {
-                                MaHV = i.MaHV,
-                                TenHV = i.KhachHang.TenKH,
-                                GioiTinh = i.KhachHang.GioiTinh,
-                                SDT = i.KhachHang.SDT,
-                                GoiTap = i.GoiTap.TenGT,
-                                NgayKT = i.NgayKT,
-                            });
+                            list.Add(HVtoHVView(i));
                 
             }
 
@@ -51,6 +66,7 @@ namespace DoAnPBL3.BLL
         public List<HV_View> GetHVViewByName(string txt)
         {
             List<HV_View> list = new List<HV_View>();
+            if (txt == "") return GetAllHVView();
             foreach (HV_View i in GetAllHVView())
             {
                 if (i.TenHV.ToLower().Contains(txt.ToLower()))
@@ -80,7 +96,7 @@ namespace DoAnPBL3.BLL
         }
         public void AddHVKH(TheHV s, KhachHang i)
         {
-            db.KhachHangs.Add(i);
+            KhachHangBLL.Instance.AddUpdateKH(i);
             db.TheHVs.Add(s);
             db.SaveChanges();
         }
@@ -151,7 +167,7 @@ namespace DoAnPBL3.BLL
                 {
                     UpdateHV(i);
                     //KhachHangBLL.Instance.UpdateKH(s);
-                    db.SaveChanges();
+                    
                 }
                 else
                 {
