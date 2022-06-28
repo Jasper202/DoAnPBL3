@@ -270,20 +270,25 @@ namespace DoAnPBL3
             List<string> LKH = new List<string>();
             if (dataGridView_KH.SelectedRows.Count >= 0)
             {
-                try
+
+                foreach (DataGridViewRow i in dataGridView_KH.SelectedRows)
                 {
-                    foreach (DataGridViewRow i in dataGridView_KH.SelectedRows)
+                    if (HVBLL.Instance.CheckMaKH(i.Cells["MaKH"].Value.ToString()) || DanhThuBLL.Instance.CheckMaKH(i.Cells["MaKH"].Value.ToString()))
+                    {
+                        MessageBox.Show("Không thể xóa khách hàng này");
+                    }
+                    else 
                     {
                         LKH.Add(i.Cells["MaKH"].Value.ToString());
-                    }
-                    KhachHangBLL.Instance.DelKH(LKH);
-                    ShowKH("");
+                        
+                    } 
+                        
                 }
+                KhachHangBLL.Instance.DelKH(LKH);
+                ShowKH("");
 
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thể xóa khách hàng này");
-                }
+
+
             }
 
         }
@@ -455,15 +460,15 @@ namespace DoAnPBL3
             DateTime first = dateTimePicker3.Value;
             DateTime last = dateTimePicker2.Value;
             int result = DateTime.Compare(first, last);
-            if(result <= 0)
+            if (result <= 0)
             {
                 dtgHoaDon.DataSource = DanhThuBLL.Instance.GetHDViewByDate(first, last);
-            }        
+            }
             else
             {
                 MessageBox.Show("Vui lòng nhập thời gian hợp lệ !!!");
-            }    
-            
+            }
+
         }
 
         private void button8_Click(object sender, EventArgs e)

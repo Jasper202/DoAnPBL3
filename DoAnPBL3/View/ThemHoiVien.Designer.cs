@@ -33,26 +33,26 @@ namespace DoAnPBL3
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.btnLuuHV = new System.Windows.Forms.Button();
             this.rdoThemHVNu = new System.Windows.Forms.RadioButton();
             this.rdoThemHVNam = new System.Windows.Forms.RadioButton();
             this.cboThemGoiTap = new System.Windows.Forms.ComboBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtThemSdt = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.txtMaHV = new System.Windows.Forms.TextBox();
             this.txtThemTenHV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateNS = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMaHV = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +114,20 @@ namespace DoAnPBL3
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnCheck
+            // 
+            this.btnCheck.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
+            this.btnCheck.Location = new System.Drawing.Point(308, 54);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(69, 31);
+            this.btnCheck.TabIndex = 5;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
             // btnLuuHV
             // 
             this.btnLuuHV.BackColor = System.Drawing.Color.OrangeRed;
@@ -156,17 +170,19 @@ namespace DoAnPBL3
             // cboThemGoiTap
             // 
             this.cboThemGoiTap.FormattingEnabled = true;
-            this.cboThemGoiTap.Items.AddRange(new object[] {
-            "Gói 1 tháng",
-            "Gói 3 tháng",
-            "Gói 6 tháng",
-            "Gói 9 tháng",
-            "Gói 12 tháng"});
             this.cboThemGoiTap.Location = new System.Drawing.Point(170, 415);
             this.cboThemGoiTap.Margin = new System.Windows.Forms.Padding(2);
             this.cboThemGoiTap.Name = "cboThemGoiTap";
             this.cboThemGoiTap.Size = new System.Drawing.Size(223, 28);
             this.cboThemGoiTap.TabIndex = 3;
+            // 
+            // txtCCCD
+            // 
+            this.txtCCCD.Location = new System.Drawing.Point(170, 366);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.Size = new System.Drawing.Size(223, 26);
+            this.txtCCCD.TabIndex = 2;
             // 
             // txtDiachi
             // 
@@ -183,6 +199,22 @@ namespace DoAnPBL3
             this.txtThemSdt.Name = "txtThemSdt";
             this.txtThemSdt.Size = new System.Drawing.Size(223, 26);
             this.txtThemSdt.TabIndex = 2;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(170, 56);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(125, 26);
+            this.txtMaKH.TabIndex = 2;
+            // 
+            // txtMaHV
+            // 
+            this.txtMaHV.Location = new System.Drawing.Point(170, 97);
+            this.txtMaHV.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaHV.Name = "txtMaHV";
+            this.txtMaHV.Size = new System.Drawing.Size(125, 26);
+            this.txtMaHV.TabIndex = 2;
             // 
             // txtThemTenHV
             // 
@@ -201,6 +233,17 @@ namespace DoAnPBL3
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Gói tập:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 369);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "CCCD";
+            this.label8.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
@@ -245,15 +288,15 @@ namespace DoAnPBL3
             this.label2.TabIndex = 1;
             this.label2.Text = "Giới tính:";
             // 
-            // label1
+            // label7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Họ tên:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 59);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Mã KH";
             // 
             // label5
             // 
@@ -265,64 +308,15 @@ namespace DoAnPBL3
             this.label5.TabIndex = 1;
             this.label5.Text = "Mã HV";
             // 
-            // txtMaHV
+            // label1
             // 
-            this.txtMaHV.Location = new System.Drawing.Point(170, 97);
-            this.txtMaHV.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Size = new System.Drawing.Size(125, 26);
-            this.txtMaHV.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 59);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Mã KH";
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(170, 56);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(125, 26);
-            this.txtMaKH.TabIndex = 2;
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnCheck.ForeColor = System.Drawing.Color.White;
-            this.btnCheck.Location = new System.Drawing.Point(308, 54);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(69, 31);
-            this.btnCheck.TabIndex = 5;
-            this.btnCheck.Text = "Check";
-            this.btnCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCheck.UseVisualStyleBackColor = false;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 369);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "CCCD";
-            this.label8.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtCCCD
-            // 
-            this.txtCCCD.Location = new System.Drawing.Point(170, 366);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(223, 26);
-            this.txtCCCD.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 142);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Họ tên:";
             // 
             // ThemHoiVien
             // 

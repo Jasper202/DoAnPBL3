@@ -26,6 +26,15 @@ namespace DoAnPBL3.BLL
         private DanhThuBLL()
         {
         }
+        public bool CheckMaKH(string MaKH)
+        {
+            foreach (HoaDon i in db.HoaDons.Select(p => p))
+            {
+                if (i.MaKH == MaKH)
+                    return true;
+            }
+            return false;
+        }
         public List<CTHD_View> GetHDViewByDate(DateTime bd,DateTime kt)
         {
             List<CTHD_View> list = new List<CTHD_View>();
@@ -119,16 +128,17 @@ namespace DoAnPBL3.BLL
             }
             return list;
         }
-        public HoaDon_View GetHDViewBySearch(string MaHD)
-        {         
+        public List<HoaDon_View> GetHoadonViewbySearch(string ma)
+        {
+            List<HoaDon_View> list = new List<HoaDon_View>();
             foreach (HoaDon_View i in GetHDView())
             {
-                if (i.MaHD == MaHD)
+                if (i.MaHD == ma)
                 {
-                    return i;
+                    list.Add(i);
                 }
             }
-            return null;
+            return list;
         }
         public void AddHD(HoaDon s)
         {

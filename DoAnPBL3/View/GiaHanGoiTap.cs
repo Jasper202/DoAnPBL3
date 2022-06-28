@@ -46,27 +46,7 @@ namespace DoAnPBL3
         {
             if (GoiTapBLL.Instance.checkMaLS(textBox1.Text))
             {
-                double gia = 0;
-                if (((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value == "GT01")
-                {
-                    gia = 300000;
-                }
-                if (((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value == "GT02")
-                {
-                    gia = 750000;
-                }
-                if (((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value == "GT03")
-                {
-                    gia = 1350000;
-                }
-                if (((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value == "GT04")
-                {
-                    gia = 1890000;
-                }
-                if (((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value == "GT05")
-                {
-                    gia = 2400000;
-                }
+                
                 LichSu_GH s = new LichSu_GH
                 {
                     MaLS = textBox1.Text,
@@ -74,7 +54,7 @@ namespace DoAnPBL3
                     NgayGH = DateTime.Now,
                     ThoigianGH = ((CBBItem2)cboGiaHanGoiTap.SelectedItem).Text,
                     MaNV = "NV01",
-                    Gia = gia,
+                    Gia = GoiTapBLL.Instance.getGia(((CBBItem2)cboGiaHanGoiTap.SelectedItem).Value),
                 };
                 GoiTapBLL.Instance.addLSGH(s);
                 GoiTapBLL.Instance.GiaHan(HVBLL.Instance.GetHVByMaHV(MaHV), cboGiaHanGoiTap.SelectedIndex);

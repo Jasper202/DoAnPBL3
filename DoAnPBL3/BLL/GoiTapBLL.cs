@@ -93,7 +93,7 @@ namespace DoAnPBL3.BLL
             db.LichSu_GHs.Add(s);
             db.SaveChanges();
         }
-        public bool checkMaLS (string maLS)
+        public bool checkMaLS(string maLS)
         {
             foreach (LichSu_GH i in db.LichSu_GHs.Select(p => p))
             {
@@ -102,7 +102,43 @@ namespace DoAnPBL3.BLL
             }
             return true;
         }
-        public void GiaHan(TheHV s,int x)
+        public double getGia(string ma)
+        {
+            foreach (GoiTap i in db.GoiTaps.Select(p => p))
+            {
+                if (i.MaGT == ma)
+                {
+                    return i.Gia;
+                }
+            }
+            return 0;
+        }
+        public int getThang(string ma)
+        {
+            int i = 0;
+            if (ma == "GT01")
+            {
+                i = 1;
+            }
+            if (ma == "GT02")
+            {
+                i = 3;
+            }
+            if (ma == "GT03")
+            {
+                i = 6;
+            }
+            if (ma == "GT04")
+            {
+                i = 9;
+            }
+            if (ma == "GT05")
+            {
+                i = 12;
+            }
+            return i;
+        }
+        public void GiaHan(TheHV s, int x)
         {
             var c = db.TheHVs.Where(p => p.MaHV == s.MaHV).FirstOrDefault();
             if (c != null)
@@ -110,7 +146,7 @@ namespace DoAnPBL3.BLL
                 if (x == 0)
                 {
                     c.NgayKT = c.NgayKT.AddMonths(1);
-                    c.Tongtien +=300000;
+                    c.Tongtien += 300000;
                     c.MaGT = "GT01";
                     db.SaveChanges();
                 }
@@ -146,7 +182,7 @@ namespace DoAnPBL3.BLL
                     c.MaGT = "GT05";
                     db.SaveChanges();
                 }
-                
+
             }
         }
     }

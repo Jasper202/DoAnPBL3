@@ -29,7 +29,12 @@ namespace DoAnPBL3
             else
                 MaKH = "";
             InitializeComponent();
+            SetCBBGoiTap();
             GUI();
+        }
+        public void SetCBBGoiTap()
+        {
+            cboThemGoiTap.Items.AddRange(GoiTapBLL.Instance.GetCBBGoiTap().ToArray());
         }
         public void GUI()
         {
@@ -94,54 +99,19 @@ namespace DoAnPBL3
                     SDT = txtThemSdt.Text,
                     CCCD = txtCCCD.Text,
                 };
-                int k = 0;
-                double tien = 0;
-                string maGT = "";
-                if (cboThemGoiTap.SelectedIndex == 0)
-                {
-                    k = 1;
-                    tien = 300000;
-                    maGT = "GT01";
-                }
-                else if (cboThemGoiTap.SelectedIndex == 1)
-                {
-                    k = 3;
-                    tien = 750000;
-                    maGT = "GT02";
-                }
-                else if (cboThemGoiTap.SelectedIndex == 2)
-                {
-                    k = 6;
-                    tien = 1350000;
-                    maGT = "GT03";
-                }
-                else if (cboThemGoiTap.SelectedIndex == 3)
-                {
-                    k = 9;
-                    tien = 1890000;
-                    maGT = "GT04";
-                }
-                else if (cboThemGoiTap.SelectedIndex == 4)
-                {
-                    k = 12;
-                    tien = 2400000;
-                    maGT = "GT05";
-                }
+               
+                
                 TheHV i = new TheHV
                 {
                     MaHV = txtMaHV.Text,
                     NgayDK = DateTime.Now,
-                    NgayKT = DateTime.Now.AddMonths(k),
-                    Tongtien = tien,
-                    MaGT = maGT,
+                    NgayKT = DateTime.Now.AddMonths(GoiTapBLL.Instance.getThang(((CBBItem2)cboThemGoiTap.SelectedItem).Value)),
+                    Tongtien = GoiTapBLL.Instance.getGia(((CBBItem2)cboThemGoiTap.SelectedItem).Value),
+                    MaGT = ((CBBItem2)cboThemGoiTap.SelectedItem).Value,
                     MaKH = txtMaKH.Text,
                     MaNV = "NV01"
                 };
-                
-                //if (KhachHangBLL.Instance.Check(MaKH))
-                //{
-                //    KhachHangBLL.Instance.UpdateKH(s);
-                //}    
+                   
                 HVBLL.Instance.AddUpdateHV(i, s);
             
                 

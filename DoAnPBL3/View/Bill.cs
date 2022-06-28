@@ -121,7 +121,7 @@ namespace DoAnPBL3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHDViewBySearch((((CBBItem2)cboMaHDBan.SelectedItem).Text).ToString());
+            dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHoadonViewbySearch(((CBBItem2)cboMaHDBan.SelectedItem).Text);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
