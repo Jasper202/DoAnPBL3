@@ -256,7 +256,7 @@ namespace DoAnPBL3
 
         private void btnUp_KH_Click(object sender, EventArgs e)
         {
-            if (dataGridView_NV.SelectedRows.Count == 1)
+            if (dataGridView_KH.SelectedRows.Count == 1)
             {
                 KhachHang_View _select = dataGridView_KH.SelectedRows[0].DataBoundItem as KhachHang_View;
                 ThemKhachHang f = new ThemKhachHang(_select.MaKH);

@@ -63,7 +63,7 @@
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
-    <Compile Include="CreateDB.cs" />
+    <Compile Include="DAL\CreateDB.cs" />
     <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\CBBItem2.cs" />
     <Compile Include="DTO\CTHD.cs" />
@@ -83,7 +83,7 @@
     <Compile Include="DTO\SanPham_View.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TheHV.cs" />
-    <Compile Include="QLGym.cs" />
+    <Compile Include="DAL\QLGym.cs" />
     <Compile Include="View\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
