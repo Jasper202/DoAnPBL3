@@ -43,7 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -249,7 +248,7 @@
             btn_Add_HV.BackColor = System.Drawing.Color.IndianRed;
             btn_Add_HV.ForeColor = System.Drawing.Color.White;
             btn_Add_HV.Location = new System.Drawing.Point(0, 34);
-            btn_Add_HV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            btn_Add_HV.Margin = new System.Windows.Forms.Padding(4);
             btn_Add_HV.Name = "btn_Add_HV";
             btn_Add_HV.Size = new System.Drawing.Size(134, 42);
             btn_Add_HV.TabIndex = 5;
@@ -351,7 +350,7 @@
             this.tabPage1.ImageIndex = 4;
             this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1147, 486);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "HỘI VIÊN";
@@ -375,7 +374,7 @@
             this.btnMenu1.BackColor = System.Drawing.Color.Gainsboro;
             this.btnMenu1.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu1.Image")));
             this.btnMenu1.Location = new System.Drawing.Point(89, 0);
-            this.btnMenu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu1.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu1.Name = "btnMenu1";
             this.btnMenu1.Size = new System.Drawing.Size(45, 34);
             this.btnMenu1.TabIndex = 3;
@@ -387,7 +386,7 @@
             this.btnSearch_HV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch_HV.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_HV.Image")));
             this.btnSearch_HV.Location = new System.Drawing.Point(1103, 14);
-            this.btnSearch_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch_HV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch_HV.Name = "btnSearch_HV";
             this.btnSearch_HV.Size = new System.Drawing.Size(38, 34);
             this.btnSearch_HV.TabIndex = 4;
@@ -527,7 +526,7 @@
             this.rbtnNu_HV.AutoSize = true;
             this.rbtnNu_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnNu_HV.Location = new System.Drawing.Point(190, 219);
-            this.rbtnNu_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnNu_HV.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnNu_HV.Name = "rbtnNu_HV";
             this.rbtnNu_HV.Size = new System.Drawing.Size(47, 24);
             this.rbtnNu_HV.TabIndex = 16;
@@ -551,7 +550,7 @@
             this.rbtnNam_HV.AutoSize = true;
             this.rbtnNam_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnNam_HV.Location = new System.Drawing.Point(118, 219);
-            this.rbtnNam_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnNam_HV.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnNam_HV.Name = "rbtnNam_HV";
             this.rbtnNam_HV.Size = new System.Drawing.Size(60, 24);
             this.rbtnNam_HV.TabIndex = 9;
@@ -563,7 +562,7 @@
             // 
             this.txtGoiTap_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGoiTap_HV.Location = new System.Drawing.Point(118, 314);
-            this.txtGoiTap_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGoiTap_HV.Margin = new System.Windows.Forms.Padding(2);
             this.txtGoiTap_HV.Name = "txtGoiTap_HV";
             this.txtGoiTap_HV.Size = new System.Drawing.Size(173, 26);
             this.txtGoiTap_HV.TabIndex = 8;
@@ -572,7 +571,7 @@
             // 
             this.txtSDT_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT_HV.Location = new System.Drawing.Point(118, 266);
-            this.txtSDT_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT_HV.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT_HV.Name = "txtSDT_HV";
             this.txtSDT_HV.Size = new System.Drawing.Size(173, 26);
             this.txtSDT_HV.TabIndex = 8;
@@ -581,7 +580,7 @@
             // 
             this.txtTen_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen_HV.Location = new System.Drawing.Point(118, 174);
-            this.txtTen_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen_HV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen_HV.Name = "txtTen_HV";
             this.txtTen_HV.Size = new System.Drawing.Size(173, 26);
             this.txtTen_HV.TabIndex = 6;
@@ -592,7 +591,7 @@
             this.txtMa_HV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa_HV.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtMa_HV.Location = new System.Drawing.Point(118, 128);
-            this.txtMa_HV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMa_HV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMa_HV.Name = "txtMa_HV";
             this.txtMa_HV.Size = new System.Drawing.Size(173, 26);
             this.txtMa_HV.TabIndex = 5;
@@ -687,7 +686,7 @@
             this.tabPage2.ImageIndex = 5;
             this.tabPage2.Location = new System.Drawing.Point(4, 54);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1147, 486);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SẢN PHẨM";
@@ -699,7 +698,7 @@
             this.btnDel_SP.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDel_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnDel_SP.Image")));
             this.btnDel_SP.Location = new System.Drawing.Point(941, 194);
-            this.btnDel_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDel_SP.Margin = new System.Windows.Forms.Padding(2);
             this.btnDel_SP.Name = "btnDel_SP";
             this.btnDel_SP.Size = new System.Drawing.Size(160, 42);
             this.btnDel_SP.TabIndex = 2;
@@ -714,7 +713,7 @@
             this.btnSearch_SP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_SP.Image")));
             this.btnSearch_SP.Location = new System.Drawing.Point(1105, 6);
-            this.btnSearch_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch_SP.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch_SP.Name = "btnSearch_SP";
             this.btnSearch_SP.Size = new System.Drawing.Size(33, 36);
             this.btnSearch_SP.TabIndex = 5;
@@ -750,7 +749,7 @@
             this.dataGridView_SP.EnableHeadersVisualStyles = false;
             this.dataGridView_SP.GridColor = System.Drawing.Color.White;
             this.dataGridView_SP.Location = new System.Drawing.Point(2, 250);
-            this.dataGridView_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_SP.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_SP.Name = "dataGridView_SP";
             this.dataGridView_SP.ReadOnly = true;
             this.dataGridView_SP.RowHeadersVisible = false;
@@ -831,7 +830,7 @@
             this.btnUp_SP.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUp_SP.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_SP.Image")));
             this.btnUp_SP.Location = new System.Drawing.Point(941, 129);
-            this.btnUp_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUp_SP.Margin = new System.Windows.Forms.Padding(2);
             this.btnUp_SP.Name = "btnUp_SP";
             this.btnUp_SP.Size = new System.Drawing.Size(160, 48);
             this.btnUp_SP.TabIndex = 1;
@@ -872,9 +871,9 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(0, 6);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(873, 230);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -905,7 +904,7 @@
             this.txtTinhtrang_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTinhtrang_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTinhtrang_SP.Location = new System.Drawing.Point(598, 180);
-            this.txtTinhtrang_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTinhtrang_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTinhtrang_SP.Name = "txtTinhtrang_SP";
             this.txtTinhtrang_SP.Size = new System.Drawing.Size(245, 26);
             this.txtTinhtrang_SP.TabIndex = 15;
@@ -915,7 +914,7 @@
             this.txtHangSX_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtHangSX_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHangSX_SP.Location = new System.Drawing.Point(598, 135);
-            this.txtHangSX_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHangSX_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtHangSX_SP.Name = "txtHangSX_SP";
             this.txtHangSX_SP.Size = new System.Drawing.Size(245, 26);
             this.txtHangSX_SP.TabIndex = 14;
@@ -925,7 +924,7 @@
             this.txtGia_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGia_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGia_SP.Location = new System.Drawing.Point(598, 42);
-            this.txtGia_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGia_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtGia_SP.Name = "txtGia_SP";
             this.txtGia_SP.Size = new System.Drawing.Size(245, 26);
             this.txtGia_SP.TabIndex = 12;
@@ -935,7 +934,7 @@
             this.txtSoLuong_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSoLuong_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong_SP.Location = new System.Drawing.Point(223, 180);
-            this.txtSoLuong_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong_SP.Name = "txtSoLuong_SP";
             this.txtSoLuong_SP.Size = new System.Drawing.Size(215, 26);
             this.txtSoLuong_SP.TabIndex = 11;
@@ -945,7 +944,7 @@
             this.txtTen_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTen_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen_SP.Location = new System.Drawing.Point(223, 89);
-            this.txtTen_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen_SP.Name = "txtTen_SP";
             this.txtTen_SP.Size = new System.Drawing.Size(215, 26);
             this.txtTen_SP.TabIndex = 9;
@@ -955,7 +954,7 @@
             this.txtMa_SP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMa_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa_SP.Location = new System.Drawing.Point(223, 42);
-            this.txtMa_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMa_SP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMa_SP.Name = "txtMa_SP";
             this.txtMa_SP.Size = new System.Drawing.Size(215, 26);
             this.txtMa_SP.TabIndex = 8;
@@ -1085,7 +1084,7 @@
             this.tabPage3.ImageIndex = 2;
             this.tabPage3.Location = new System.Drawing.Point(4, 54);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1147, 486);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "NHÂN VIÊN";
@@ -1109,7 +1108,7 @@
             this.btnMenu_NV.BackColor = System.Drawing.Color.Gainsboro;
             this.btnMenu_NV.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu_NV.Image")));
             this.btnMenu_NV.Location = new System.Drawing.Point(92, 0);
-            this.btnMenu_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_NV.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu_NV.Name = "btnMenu_NV";
             this.btnMenu_NV.Size = new System.Drawing.Size(43, 40);
             this.btnMenu_NV.TabIndex = 3;
@@ -1134,7 +1133,7 @@
             this.txtSearch_NV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch_NV.Location = new System.Drawing.Point(836, 15);
-            this.txtSearch_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch_NV.Name = "txtSearch_NV";
             this.txtSearch_NV.Size = new System.Drawing.Size(259, 41);
             this.txtSearch_NV.TabIndex = 2;
@@ -1159,9 +1158,9 @@
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(836, 71);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(307, 421);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -1172,7 +1171,7 @@
             this.rbtnNu_NV.AutoSize = true;
             this.rbtnNu_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnNu_NV.Location = new System.Drawing.Point(200, 206);
-            this.rbtnNu_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnNu_NV.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnNu_NV.Name = "rbtnNu_NV";
             this.rbtnNu_NV.Size = new System.Drawing.Size(47, 24);
             this.rbtnNu_NV.TabIndex = 12;
@@ -1185,7 +1184,7 @@
             this.rbtnNam_NV.AutoSize = true;
             this.rbtnNam_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnNam_NV.Location = new System.Drawing.Point(119, 206);
-            this.rbtnNam_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnNam_NV.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnNam_NV.Name = "rbtnNam_NV";
             this.rbtnNam_NV.Size = new System.Drawing.Size(60, 24);
             this.rbtnNam_NV.TabIndex = 11;
@@ -1197,7 +1196,7 @@
             // 
             this.txtVitri_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVitri_NV.Location = new System.Drawing.Point(119, 363);
-            this.txtVitri_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVitri_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtVitri_NV.Name = "txtVitri_NV";
             this.txtVitri_NV.Size = new System.Drawing.Size(176, 26);
             this.txtVitri_NV.TabIndex = 10;
@@ -1206,7 +1205,7 @@
             // 
             this.txtSDT_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT_NV.Location = new System.Drawing.Point(119, 258);
-            this.txtSDT_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT_NV.Name = "txtSDT_NV";
             this.txtSDT_NV.Size = new System.Drawing.Size(176, 26);
             this.txtSDT_NV.TabIndex = 9;
@@ -1215,7 +1214,7 @@
             // 
             this.txtCCCD_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD_NV.Location = new System.Drawing.Point(119, 312);
-            this.txtCCCD_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCCCD_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtCCCD_NV.Name = "txtCCCD_NV";
             this.txtCCCD_NV.Size = new System.Drawing.Size(176, 26);
             this.txtCCCD_NV.TabIndex = 8;
@@ -1224,7 +1223,7 @@
             // 
             this.txtTen_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen_NV.Location = new System.Drawing.Point(119, 159);
-            this.txtTen_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen_NV.Name = "txtTen_NV";
             this.txtTen_NV.Size = new System.Drawing.Size(176, 26);
             this.txtTen_NV.TabIndex = 7;
@@ -1233,7 +1232,7 @@
             // 
             this.txtMa_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa_NV.Location = new System.Drawing.Point(119, 115);
-            this.txtMa_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMa_NV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMa_NV.Name = "txtMa_NV";
             this.txtMa_NV.Size = new System.Drawing.Size(176, 26);
             this.txtMa_NV.TabIndex = 6;
@@ -1415,7 +1414,7 @@
             this.btnSearch_NV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch_NV.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_NV.Image")));
             this.btnSearch_NV.Location = new System.Drawing.Point(1099, 15);
-            this.btnSearch_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch_NV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch_NV.Name = "btnSearch_NV";
             this.btnSearch_NV.Size = new System.Drawing.Size(44, 40);
             this.btnSearch_NV.TabIndex = 5;
@@ -1438,7 +1437,7 @@
             this.tabPage4.ImageIndex = 3;
             this.tabPage4.Location = new System.Drawing.Point(4, 54);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1147, 486);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "KHÁCH HÀNG";
@@ -1482,7 +1481,7 @@
             this.btnDel_KH.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDel_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnDel_KH.Image")));
             this.btnDel_KH.Location = new System.Drawing.Point(609, 241);
-            this.btnDel_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDel_KH.Margin = new System.Windows.Forms.Padding(2);
             this.btnDel_KH.Name = "btnDel_KH";
             this.btnDel_KH.Size = new System.Drawing.Size(160, 45);
             this.btnDel_KH.TabIndex = 17;
@@ -1504,7 +1503,7 @@
             this.dataGridView_KH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1520,17 +1519,9 @@
             this.dataGridView_KH.EnableHeadersVisualStyles = false;
             this.dataGridView_KH.GridColor = System.Drawing.Color.White;
             this.dataGridView_KH.Location = new System.Drawing.Point(6, 292);
-            this.dataGridView_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_KH.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_KH.Name = "dataGridView_KH";
             this.dataGridView_KH.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_KH.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_KH.RowHeadersVisible = false;
             this.dataGridView_KH.RowHeadersWidth = 51;
             this.dataGridView_KH.RowTemplate.Height = 24;
@@ -1611,7 +1602,7 @@
             // 
             this.txtSearchKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchKH.Location = new System.Drawing.Point(355, 12);
-            this.txtSearchKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchKH.Name = "txtSearchKH";
             this.txtSearchKH.Size = new System.Drawing.Size(117, 32);
             this.txtSearchKH.TabIndex = 15;
@@ -1620,7 +1611,7 @@
             // 
             this.btnSearch_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_KH.Image")));
             this.btnSearch_KH.Location = new System.Drawing.Point(485, 12);
-            this.btnSearch_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch_KH.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch_KH.Name = "btnSearch_KH";
             this.btnSearch_KH.Size = new System.Drawing.Size(56, 32);
             this.btnSearch_KH.TabIndex = 14;
@@ -1644,7 +1635,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateNS_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNS_KH.Location = new System.Drawing.Point(108, 148);
-            this.dateNS_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateNS_KH.Margin = new System.Windows.Forms.Padding(2);
             this.dateNS_KH.Name = "dateNS_KH";
             this.dateNS_KH.Size = new System.Drawing.Size(423, 28);
             this.dateNS_KH.TabIndex = 11;
@@ -1665,7 +1656,7 @@
             // 
             this.txtMa_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa_KH.Location = new System.Drawing.Point(108, 57);
-            this.txtMa_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMa_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txtMa_KH.Name = "txtMa_KH";
             this.txtMa_KH.Size = new System.Drawing.Size(423, 28);
             this.txtMa_KH.TabIndex = 7;
@@ -1674,7 +1665,7 @@
             // 
             this.txtSDT_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT_KH.Location = new System.Drawing.Point(108, 197);
-            this.txtSDT_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT_KH.Name = "txtSDT_KH";
             this.txtSDT_KH.Size = new System.Drawing.Size(423, 28);
             this.txtSDT_KH.TabIndex = 9;
@@ -1707,7 +1698,7 @@
             // 
             this.txtDiaChi_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi_KH.Location = new System.Drawing.Point(108, 242);
-            this.txtDiaChi_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi_KH.Name = "txtDiaChi_KH";
             this.txtDiaChi_KH.Size = new System.Drawing.Size(423, 28);
             this.txtDiaChi_KH.TabIndex = 10;
@@ -1716,7 +1707,7 @@
             // 
             this.txtTen_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen_KH.Location = new System.Drawing.Point(108, 100);
-            this.txtTen_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen_KH.Name = "txtTen_KH";
             this.txtTen_KH.Size = new System.Drawing.Size(423, 28);
             this.txtTen_KH.TabIndex = 6;
@@ -1740,7 +1731,7 @@
             this.btnUp_KH.ForeColor = System.Drawing.Color.White;
             this.btnUp_KH.Image = ((System.Drawing.Image)(resources.GetObject("btnUp_KH.Image")));
             this.btnUp_KH.Location = new System.Drawing.Point(609, 192);
-            this.btnUp_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUp_KH.Margin = new System.Windows.Forms.Padding(2);
             this.btnUp_KH.Name = "btnUp_KH";
             this.btnUp_KH.Size = new System.Drawing.Size(160, 45);
             this.btnUp_KH.TabIndex = 16;
@@ -1775,7 +1766,7 @@
             this.tabPage5.ImageIndex = 6;
             this.tabPage5.Location = new System.Drawing.Point(4, 54);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1147, 486);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "GÓI TẬP";
@@ -1790,14 +1781,14 @@
             this.dataGridView_GT.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_GT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_GT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_GT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_GT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_GT.ColumnHeadersHeight = 45;
             this.dataGridView_GT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView_GT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1810,7 +1801,7 @@
             this.dataGridView_GT.EnableHeadersVisualStyles = false;
             this.dataGridView_GT.GridColor = System.Drawing.Color.White;
             this.dataGridView_GT.Location = new System.Drawing.Point(2, 260);
-            this.dataGridView_GT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_GT.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_GT.Name = "dataGridView_GT";
             this.dataGridView_GT.ReadOnly = true;
             this.dataGridView_GT.RowHeadersVisible = false;
@@ -1893,9 +1884,9 @@
             this.groupBox6.Controls.Add(this.label29);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(5, 15);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(693, 231);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
@@ -1929,7 +1920,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(392, 165);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(148, 37);
             this.button6.TabIndex = 8;
@@ -1944,7 +1935,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(254, 164);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(134, 38);
             this.button5.TabIndex = 7;
@@ -1959,7 +1950,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(111, 164);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(128, 38);
             this.btnSearch.TabIndex = 6;
@@ -1973,7 +1964,7 @@
             this.cbbGoi_GT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGoi_GT.FormattingEnabled = true;
             this.cbbGoi_GT.Location = new System.Drawing.Point(111, 109);
-            this.cbbGoi_GT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbGoi_GT.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGoi_GT.Name = "cbbGoi_GT";
             this.cbbGoi_GT.Size = new System.Drawing.Size(164, 30);
             this.cbbGoi_GT.TabIndex = 5;
@@ -1983,7 +1974,7 @@
             this.txtMa_GT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMa_GT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa_GT.Location = new System.Drawing.Point(111, 50);
-            this.txtMa_GT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMa_GT.Margin = new System.Windows.Forms.Padding(2);
             this.txtMa_GT.Name = "txtMa_GT";
             this.txtMa_GT.Size = new System.Drawing.Size(164, 28);
             this.txtMa_GT.TabIndex = 3;
@@ -2057,7 +2048,7 @@
             this.tabPage6.ImageIndex = 1;
             this.tabPage6.Location = new System.Drawing.Point(4, 54);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1147, 486);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "DOANH THU";
@@ -2073,14 +2064,14 @@
             this.dtgHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgHoaDon.ColumnHeadersHeight = 45;
             this.dtgHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2097,17 +2088,17 @@
             this.dtgHoaDon.EnableHeadersVisualStyles = false;
             this.dtgHoaDon.GridColor = System.Drawing.Color.White;
             this.dtgHoaDon.Location = new System.Drawing.Point(5, 141);
-            this.dtgHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.dtgHoaDon.Name = "dtgHoaDon";
             this.dtgHoaDon.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgHoaDon.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHoaDon.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgHoaDon.RowHeadersVisible = false;
             this.dtgHoaDon.RowHeadersWidth = 51;
             this.dtgHoaDon.RowTemplate.Height = 24;
@@ -2218,9 +2209,9 @@
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(5, 6);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(1133, 139);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
@@ -2233,7 +2224,7 @@
             this.butInHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butInHD.ForeColor = System.Drawing.Color.White;
             this.butInHD.Location = new System.Drawing.Point(815, 58);
-            this.butInHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butInHD.Margin = new System.Windows.Forms.Padding(2);
             this.butInHD.Name = "butInHD";
             this.butInHD.Size = new System.Drawing.Size(155, 36);
             this.butInHD.TabIndex = 5;
@@ -2260,7 +2251,7 @@
             this.butXemHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butXemHD.ForeColor = System.Drawing.Color.White;
             this.butXemHD.Location = new System.Drawing.Point(696, 58);
-            this.butXemHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butXemHD.Margin = new System.Windows.Forms.Padding(2);
             this.butXemHD.Name = "butXemHD";
             this.butXemHD.Size = new System.Drawing.Size(93, 36);
             this.butXemHD.TabIndex = 4;
@@ -2274,7 +2265,7 @@
             this.dateTimePicker3.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Location = new System.Drawing.Point(79, 61);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(272, 26);
             this.dateTimePicker3.TabIndex = 3;
@@ -2285,7 +2276,7 @@
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(403, 61);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(272, 26);
             this.dateTimePicker2.TabIndex = 2;
@@ -2419,7 +2410,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phòng Gym";

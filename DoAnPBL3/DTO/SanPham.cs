@@ -24,7 +24,7 @@ namespace DoAnPBL3.DTO
         [StringLength(9)]
         public string MaLH { get; set; }
        
-        public double DonGia { get; set; }
+        public double DonGia { get; set; } 
         public int SoLuongCon { get; set; }
         public DateTime NgayNhap { get; set; }
         public DateTime HanSuDung { get; set; }
