@@ -72,6 +72,15 @@ namespace DoAnPBL3.BLL
             }
             return false;
         }
+        public string getTenKH(string MaKH)
+        {
+            foreach (KhachHang i in db.KhachHangs.Select(p => p))
+            {
+                if (i.MaKH == MaKH)
+                    return i.TenKH;
+            }
+            return "";
+        }
         public void AddKH(KhachHang s)
         {
             db.KhachHangs.Add(s);

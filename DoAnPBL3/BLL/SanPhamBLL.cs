@@ -122,6 +122,17 @@ namespace DoAnPBL3.BLL
                 }
             }
         }
+        public double getGiaSP(string maSP)
+        {
+            foreach (SanPham i in db.SanPhams.Select(p => p))
+            {
+                if (i.MaSP == maSP)
+                {
+                    return i.DonGia;
+                }    
+            }
+            return 0;   
+        }
         public SanPham GetSPByMaSP(string MaSP)
         {
             foreach (SanPham i in db.SanPhams.Select(p => p))

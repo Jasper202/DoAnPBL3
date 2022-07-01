@@ -171,5 +171,87 @@ namespace DoAnPBL3.BLL
             db.CTHDs.Add(s);
             db.SaveChanges();
         }
+        public void UpdateTongHD(string ma, double gia)
+        {
+            foreach(HoaDon i in db.HoaDons.Select(p => p))
+            {
+                if (ma == i.MaHD)
+                {
+                    i.TongHD = i.TongHD + gia;
+                    
+                }    
+            }
+            db.SaveChanges();
+        }
+        public int getCount()
+        {
+            return db.CTHDs.Count();
+        }
+        public string getMaCTHD()
+        {
+            string maCTHD = "";
+            if (getCount() < 9)
+            {
+                maCTHD = ("CT0" + (getCount() + 1)).ToString();
+            }
+            else
+            {
+                maCTHD = ("CT" + (getCount() + 1)).ToString();
+            }
+            return maCTHD;
+        }
+        public bool checkMaHD(string ma)
+        {
+            foreach(HoaDon i in db.HoaDons.Select(p =>p))
+            {
+                if (ma == i.MaHD)
+                {
+                    return true;
+                }    
+            }    
+            return false;
+        }
+        public string getMaHDNow()
+        {
+            string maHD = "";
+            if (db.HoaDons.Count() < 9)
+            {
+                maHD = ("HD0" + db.HoaDons.Count()).ToString();
+            }
+            else
+            {
+                maHD = ("HD" + db.HoaDons.Count()).ToString();
+            }
+            return maHD;
+        }
+        public double getTongHD(string ma)
+        {
+            foreach (HoaDon i in db.HoaDons.Select(p => p))
+            {
+                if (i.MaHD == ma)
+                {
+                    return i.TongHD;
+                }    
+            }
+            return 0;
+        }
+        public string getSum()
+        {
+            return (db.HoaDons.Sum(p => p.TongHD)).ToString();
+            
+        }
+        public string getMaHD()
+        {
+            string maHD = "";
+            if (db.HoaDons.Count() < 9)
+            {
+                maHD = ("HD0" + (db.HoaDons.Count() + 1)).ToString();
+            }
+            else
+            {
+                maHD = ("HD" + (db.HoaDons.Count() + 1)).ToString();
+            }
+            return maHD;
+        }
     }
 }
