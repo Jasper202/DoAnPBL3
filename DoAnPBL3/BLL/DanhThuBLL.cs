@@ -35,6 +35,27 @@ namespace DoAnPBL3.BLL
             }
             return false;
         }
+        public List<CTHD_View> GetAllCTHDView()
+        {
+            List<CTHD_View> list = new List<CTHD_View>();
+            foreach (CTHD i in db.CTHDs.Select(p => p))
+            {            
+                    list.Add(new CTHD_View
+                    {
+                        MaCTHD = i.MaCTHD,
+                        MaSP = i.MaSP,
+                        TenSP = i.SanPham.TenSP,
+                        SoLuong = i.SoLuong,
+                        DonGia = i.Gia,
+                        NgayInHD = i.NgayInHD,
+                        MaKH = i.HoaDon.MaKH,
+                        TenKH = i.HoaDon.KhachHang.TenKH,
+                        MaNV = i.HoaDon.MaNV,
+                        DanhSo = (i.SoLuong * i.Gia)
+                    });
+                }
+            return list;
+        }         
         public List<CTHD_View> GetHDViewByDate(DateTime bd,DateTime kt)
         {
             List<CTHD_View> list = new List<CTHD_View>();
@@ -145,16 +166,10 @@ namespace DoAnPBL3.BLL
             db.HoaDons.Add(s);
             db.SaveChanges();
         }
-        //public void DellHD(List<string> listDel)
-        //{
-        //    foreach (string s in listDel)
-        //    {
-        //        if(s !=null)
-        //        {
-        //            db.HoaDons.Remove(db.HoaDons.Find(s));
-        //            db.SaveChanges();
-        //        }    
-        //    }    
-        //}
+        public void AddCTHD(CTHD s)
+        {
+            db.CTHDs.Add(s);
+            db.SaveChanges();
+        }
     }
 }

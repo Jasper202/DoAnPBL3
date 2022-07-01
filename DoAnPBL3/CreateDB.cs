@@ -82,13 +82,13 @@ namespace DoAnPBL3
             });
             context.CTHDs.AddRange(new CTHD[]
                 {
-                    new CTHD{MaCTHD = "CT01", MaHD = "HD01", SoLuong = 1,NgayInHD=new DateTime(2022,6,8), MaSP = "SP03", Gia = 300000},
-                    new CTHD{MaCTHD = "CT02", MaHD = "HD02", SoLuong = 2,NgayInHD=new DateTime(2022,6,7), MaSP = "SP01", Gia = 100000},
-                    new CTHD{MaCTHD = "CT03", MaHD = "HD03", SoLuong = 3,NgayInHD=new DateTime(2022,6,6), MaSP = "SP02", Gia = 200000},
-                    new CTHD{MaCTHD = "CT04", MaHD = "HD04", SoLuong = 4,NgayInHD=new DateTime(2022,6,5), MaSP = "SP01", Gia = 100000},
-                    new CTHD{MaCTHD = "CT05", MaHD = "HD04", SoLuong = 2,NgayInHD=new DateTime(2022,6,4), MaSP = "SP02", Gia = 200000},
-                    new CTHD{MaCTHD = "CT06", MaHD = "HD05", SoLuong = 3,NgayInHD=new DateTime(2022,6,3), MaSP = "SP04", Gia = 400000},
-                    new CTHD{MaCTHD = "CT07", MaHD = "HD05", SoLuong = 5,NgayInHD=new DateTime(2022,6,2), MaSP = "SP01", Gia = 100000},
+                    new CTHD{MaCTHD = "CT01", MaHD = "HD01", SoLuong = 1,NgayInHD=new DateTime(2022,7,8), MaSP = "SP03", Gia = 300000},
+                    new CTHD{MaCTHD = "CT02", MaHD = "HD02", SoLuong = 2,NgayInHD=new DateTime(2022,7,7), MaSP = "SP01", Gia = 100000},
+                    new CTHD{MaCTHD = "CT03", MaHD = "HD03", SoLuong = 3,NgayInHD=new DateTime(2022,7,6), MaSP = "SP02", Gia = 200000},
+                    new CTHD{MaCTHD = "CT04", MaHD = "HD04", SoLuong = 4,NgayInHD=new DateTime(2022,7,5), MaSP = "SP01", Gia = 100000},
+                    new CTHD{MaCTHD = "CT05", MaHD = "HD04", SoLuong = 2,NgayInHD=new DateTime(2022,7,4), MaSP = "SP02", Gia = 200000},
+                    new CTHD{MaCTHD = "CT06", MaHD = "HD05", SoLuong = 3,NgayInHD=new DateTime(2022,7,3), MaSP = "SP04", Gia = 400000},
+                    new CTHD{MaCTHD = "CT07", MaHD = "HD05", SoLuong = 5,NgayInHD=new DateTime(2022,7,2), MaSP = "SP01", Gia = 100000},
                 });
             context.GoiTaps.AddRange(new GoiTap[]
                 {

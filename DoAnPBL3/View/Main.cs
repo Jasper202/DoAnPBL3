@@ -22,7 +22,7 @@ namespace DoAnPBL3
             InitializeComponent();
             Load();
 
-        }
+        }          
         public void Load()
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
@@ -454,7 +454,7 @@ namespace DoAnPBL3
                 }
             }
         }
-
+        // QUẢN LÝ DOANH THU
         private void butXemHD_Click(object sender, EventArgs e)
         {
             DateTime first = dateTimePicker3.Value;
@@ -470,10 +470,15 @@ namespace DoAnPBL3
             }
 
         }
-
-        private void button8_Click(object sender, EventArgs e)
+        public void ShowCTHD()
+        {
+            dtgHoaDon.DataSource = DanhThuBLL.Instance.GetAllCTHDView();
+        }
+    
+        private void butInHD_Click(object sender, EventArgs e)
         {
             Bill f = new Bill();
+            f.d = new Bill.MyDel(ShowCTHD);
             f.Show();
         }
 
@@ -483,5 +488,7 @@ namespace DoAnPBL3
             Login f = new Login();
             f.Visible = true;
         }
+
+        
     }
 }

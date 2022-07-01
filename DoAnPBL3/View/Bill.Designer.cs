@@ -382,7 +382,6 @@ namespace DoAnPBL3
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "LƯU";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
             // btnCancel
             // 

@@ -16,9 +16,11 @@ namespace DoAnPBL3
     public partial class Bill : Form
     {
         QLGym db = new QLGym();
+        public delegate void MyDel();
+        public MyDel d { get; set; }           
 
         public Bill()
-        {
+        {         
             InitializeComponent();
             Load();
             SetCBBNV();
@@ -89,36 +91,7 @@ namespace DoAnPBL3
             txtDonGiaBan.Text = "";
             txtSoLuong.Text = "";
             txtThanhTien.Text = "";
-        }
-        private void btnLuu_Click_1(object sender, EventArgs e)
-        {
-            
-            HoaDon s = new HoaDon
-            {
-                MaHD = txtMaHDBan.Text,
-                NgayBan = dtpNgayBan.Value,
-                MaNV = ((CBBItem2)cbbMaNV.SelectedItem).Text,
-                MaKH = ((CBBItem2)cbbMaKH.SelectedItem).Text,
-                TongHD = Double.Parse(txtThanhTien.Text)
-            };
-            DanhThuBLL.Instance.AddHD(s);
-            dgvHDBanHang.DataSource = dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHDView();
-            Reset();
-        }
-        //private void btnXoa_Click(object sender, EventArgs e)
-        //{
-        //    List<string> list = new List<string>();
-        //    if(dgvHDBanHang.SelectedRows.Count >=0)
-        //    {
-        //        foreach(DataGridViewRow i in dgvHDBanHang.SelectedRows)
-        //        {
-        //            list.Add(i.Cells["MaHD"].Value.ToString());
-        //        }
-        //        DanhThuBLL.Instance.DellHD(list);
-        //    }
-        //    dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHDView();
-        //}
-
+        }           
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHoadonViewbySearch(((CBBItem2)cboMaHDBan.SelectedItem).Text);
@@ -140,8 +113,25 @@ namespace DoAnPBL3
                 TongHD = Double.Parse(txtThanhTien.Text)
             };
             DanhThuBLL.Instance.AddHD(s);
-            dgvHDBanHang.DataSource = dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHDView();
+            dgvHDBanHang.DataSource = DanhThuBLL.Instance.GetHDView();
+            ReloadCTHD();
             Reset();
         }
+        public void ReloadCTHD()
+        {                   
+            CTHD s = new CTHD
+            {
+                MaCTHD = "3",
+                MaHD = txtMaHDBan.Text,
+                SoLuong = Convert.ToInt32(txtSoLuong.Text),
+                NgayInHD = dtpNgayBan.Value,
+                MaSP = ((CBBItem2)cbbMatHang.SelectedItem).Value,             
+                Gia = Convert.ToDouble(txtDonGiaBan.Text),              
+            };
+            DanhThuBLL.Instance.AddCTHD(s);
+            d();
+        }
+
+
     }
 }
