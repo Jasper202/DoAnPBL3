@@ -72,6 +72,26 @@ namespace DoAnPBL3.BLL
             }
             return list;
         }
+        public bool checkMaNV(string ma)
+        {
+            bool check = false; 
+            foreach (HoaDon i in db.HoaDons.Select(p => p))
+            {
+                if (i.MaNV == ma)
+                    check = true;   
+            }
+            foreach (TheHV i in db.TheHVs.Select(p => p))
+            {
+                if (i.MaNV == ma)
+                    check = true;
+            }
+            foreach (LichSu_GH i in db.LichSu_GHs.Select(p => p))
+            {
+                if (i.MaNV == ma)
+                    check = true;
+            }
+            return check;
+        }
         public bool Check(string MaNV)
         {
             foreach(NhanVien i in db.NhanViens.Select(p=>p))

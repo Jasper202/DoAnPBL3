@@ -44,6 +44,11 @@ namespace DoAnPBL3
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtGiaHanMaHV.Text == ""|| textBox1.Text =="" || cboGiaHanGoiTap.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+            }
+            else    
             if (GoiTapBLL.Instance.checkMaLS(textBox1.Text))
             {
                 

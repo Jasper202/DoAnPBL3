@@ -22,7 +22,7 @@ namespace DoAnPBL3
             InitializeComponent();
             Load();
 
-        }          
+        }
         public void Load()
         {
             dataGridView_NV.DataSource = NhanVienBLL.Instance.GetAllNVView();
@@ -119,20 +119,22 @@ namespace DoAnPBL3
             List<string> LNV = new List<string>();
             if (dataGridView_NV.SelectedRows.Count >= 0)
             {
-                try
+
+                foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
                 {
-                    foreach (DataGridViewRow i in dataGridView_NV.SelectedRows)
+                    if (NhanVienBLL.Instance.checkMaNV(i.Cells["MaNV"].Value.ToString()))
+                    {
+                        MessageBox.Show("Không thể xóa nhân viên này");
+                    }
+                    else
                     {
                         LNV.Add(i.Cells["MaNV"].Value.ToString());
                     }
-                    NhanVienBLL.Instance.DelNV(LNV);
-                    ShowNV("");
-                }
 
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thể xóa nhân viên này");
                 }
+                NhanVienBLL.Instance.DelNV(LNV);
+                ShowNV("");
+
             }
 
         }
@@ -195,19 +197,19 @@ namespace DoAnPBL3
             List<string> LSP = new List<string>();
             if (dataGridView_SP.SelectedRows.Count >= 0)
             {
-                try
+
+                foreach (DataGridViewRow i in dataGridView_SP.SelectedRows)
                 {
-                    foreach (DataGridViewRow i in dataGridView_SP.SelectedRows)
+                    if (SanPhamBLL.Instance.checkMaSP(i.Cells["MaSP"].Value.ToString()))
                     {
-                        LSP.Add(i.Cells["MaSP"].Value.ToString());
+                        MessageBox.Show("Không thể xóa sản phẩm này");
                     }
-                    SanPhamBLL.Instance.DelSP(LSP);
-                    ShowSP("");
+                    else
+                        LSP.Add(i.Cells["MaSP"].Value.ToString());
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thể sản phẩm này");
-                }
+                SanPhamBLL.Instance.DelSP(LSP);
+                ShowSP("");
+
 
             }
 
@@ -256,7 +258,7 @@ namespace DoAnPBL3
 
         private void btnUp_KH_Click(object sender, EventArgs e)
         {
-            if (dataGridView_NV.SelectedRows.Count == 1)
+            if (dataGridView_KH.SelectedRows.Count == 1)
             {
                 KhachHang_View _select = dataGridView_KH.SelectedRows[0].DataBoundItem as KhachHang_View;
                 ThemKhachHang f = new ThemKhachHang(_select.MaKH);
@@ -277,18 +279,15 @@ namespace DoAnPBL3
                     {
                         MessageBox.Show("Không thể xóa khách hàng này");
                     }
-                    else 
+                    else
                     {
                         LKH.Add(i.Cells["MaKH"].Value.ToString());
-                        
-                    } 
-                        
+
+                    }
+
                 }
                 KhachHangBLL.Instance.DelKH(LKH);
                 ShowKH("");
-
-
-
             }
 
         }
@@ -341,20 +340,17 @@ namespace DoAnPBL3
             List<string> LHV = new List<string>();
             if (dataGridView_HV.SelectedRows.Count >= 0)
             {
-                try
+                foreach (DataGridViewRow i in dataGridView_HV.SelectedRows)
                 {
-                    foreach (DataGridViewRow i in dataGridView_HV.SelectedRows)
+                    if (HVBLL.Instance.CheckMaHV2(i.Cells["MaHV"].Value.ToString()))
                     {
-                        LHV.Add(i.Cells["MaHV"].Value.ToString());
+                        MessageBox.Show("Không thể xóa hội viên này");
                     }
-                    HVBLL.Instance.DelHV(LHV);
-                    ShowHV("");
+                    else
+                        LHV.Add(i.Cells["MaHV"].Value.ToString());
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thể xóa hội viên này");
-                }
-
+                HVBLL.Instance.DelHV(LHV);
+                ShowHV("");
             }
 
         }
@@ -474,7 +470,7 @@ namespace DoAnPBL3
         {
             dtgHoaDon.DataSource = DanhThuBLL.Instance.GetAllCTHDView();
         }
-    
+
         private void butInHD_Click(object sender, EventArgs e)
         {
             Bill f = new Bill();
@@ -489,6 +485,6 @@ namespace DoAnPBL3
             f.Visible = true;
         }
 
-        
+
     }
 }

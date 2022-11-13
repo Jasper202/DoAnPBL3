@@ -48,7 +48,11 @@ namespace DoAnPBL3
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            try
+            if (txtThemTenKH.Text == "" || txtThemMaKH.Text == "" || txtThemDiaChiKH.Text == "" || txtCCCD.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+            }
+            else
             {
                 KhachHang s = new KhachHang
                 {
@@ -64,10 +68,8 @@ namespace DoAnPBL3
                 d1("");
                 this.Dispose();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
-            }
+                
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

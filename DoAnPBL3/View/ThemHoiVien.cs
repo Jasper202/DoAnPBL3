@@ -87,8 +87,12 @@ namespace DoAnPBL3
 
         private void btnLuuHV_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            if (txtMaHV.Text == "" || txtMaKH.Text == "" || txtThemTenHV.Text == "" || txtThemSdt.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+            }
+            else 
+            {
                 KhachHang s = new KhachHang
                 {
                     MaKH = txtMaKH.Text,
@@ -99,8 +103,8 @@ namespace DoAnPBL3
                     SDT = txtThemSdt.Text,
                     CCCD = txtCCCD.Text,
                 };
-               
-                
+
+
                 TheHV i = new TheHV
                 {
                     MaHV = txtMaHV.Text,
@@ -111,17 +115,12 @@ namespace DoAnPBL3
                     MaKH = txtMaKH.Text,
                     MaNV = "NV01"
                 };
-                   
                 HVBLL.Instance.AddUpdateHV(i, s);
-            
+                d2("");
+                this.Dispose();
+            } 
                 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
-            //}
-            d2("");
-            this.Dispose();
+                
         }
 
         private void button1_Click(object sender, EventArgs e)

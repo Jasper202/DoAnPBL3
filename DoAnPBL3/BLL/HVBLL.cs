@@ -76,6 +76,7 @@ namespace DoAnPBL3.BLL
             }
             return list;
         }
+        //check mã khách hàng trong bảng thẻ HV
         public bool CheckMaKH(string MaKH)
         {
             foreach (TheHV i in db.TheHVs.Select(p => p))
@@ -85,6 +86,17 @@ namespace DoAnPBL3.BLL
             }
             return false;
         }
+        //check trong mã HV trong bảng lịch sử
+        public bool CheckMaHV2(string MaHV)
+        {
+            foreach (LichSu_GH i in db.LichSu_GHs.Select(p => p))
+            {
+                if (i.MaHV == MaHV)
+                    return true;
+            }
+            return false;
+        }
+        //check mã hội viên trong bảng thẻ HV
         public bool CheckMaHV(string MaHV)
         {
             foreach (TheHV i in db.TheHVs.Select(p => p))
@@ -166,7 +178,7 @@ namespace DoAnPBL3.BLL
                 if (CheckMaHV(i.MaHV))
                 {
                     UpdateHV(i);
-                    //KhachHangBLL.Instance.UpdateKH(s);
+                    
                     
                 }
                 else
@@ -186,15 +198,6 @@ namespace DoAnPBL3.BLL
         }
         public void DelHV(List<string> ListDel)
         {
-            foreach (string s in ListDel)
-            {
-                if (s != "")
-                {
-                    //var c = db.LichSu_GHs.Where(p => p.MaHV == s).Select(p => p.MaLS);
-                    //db.LichSu_GHs.Remove(db.LichSu_GHs.Find(c));
-                    //db.SaveChanges();
-                }
-            }
             foreach (string s in ListDel)
             {
                 if (s != "")

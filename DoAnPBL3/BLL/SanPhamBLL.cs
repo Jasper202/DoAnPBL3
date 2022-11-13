@@ -71,6 +71,15 @@ namespace DoAnPBL3.BLL
             }
             return list;
         }
+        public bool checkMaSP(string ma)
+        {
+            foreach (CTHD i in db.CTHDs.Select(p => p))
+            {
+                if (i.MaSP == ma)
+                    return true;
+            }
+            return false;
+        }
         public bool Check(string MaSP)
         {
             foreach (SanPham i in db.SanPhams.Select(p => p))

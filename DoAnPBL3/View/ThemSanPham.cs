@@ -57,7 +57,11 @@ namespace DoAnPBL3
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            try 
+            if(txtDonGiaSP.Text == "" || txtMaSP.Text == "" || txtSoLuongSP.Text == "" || txtTenSP.Text == "" || cboLoaiSP.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+            }
+            else
             {
                 SanPham s = new SanPham
                 {
@@ -72,13 +76,8 @@ namespace DoAnPBL3
                 SanPhamBLL.Instance.AddUpdate(s);
                 d("");
                 this.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Chưa nhập thông tin hoặc nhập sai");
-            }
-            
-            
+            }    
+                
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
